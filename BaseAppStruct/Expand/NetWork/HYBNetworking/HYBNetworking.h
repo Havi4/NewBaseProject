@@ -10,11 +10,7 @@
 #import <UIKit/UIKit.h>
 
 // 项目打包上线都不会打印日志，因此可放心。
-#ifdef DEBUG
-#define HYBAppLog(s, ... ) NSLog( @"[%@ in line %d] ===============>%@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
-#else
-#define HYBAppLog(s, ... )
-#endif
+
 
 /*!
  *  @author 黄仪标, 16-01-08 14:01:26

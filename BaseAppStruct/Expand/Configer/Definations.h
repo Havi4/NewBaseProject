@@ -12,17 +12,18 @@
 
 #endif /* Definations_h */
 
-#define kAppBaseURL @"http://webservice.meddo99.com:9000/"
+#define kAppBaseURL @"http://imgsrc.baidu.com/forum/pic/item/"
 #define kAppTestBaseURL @"http://webservice.meddo99.com:9001/"
 #define kKeyWindow [UIApplication sharedApplication].keyWindow
 #define kUserDefaults [NSUserDefaults standardUserDefaults]
 #define kAdImageName @"adImageName";
 
-#if DEBUG
-#define DeBugLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#ifdef DEBUG
+#define DeBugLog(s, ... ) NSLog( @"[%@ in line %d] ===============>%@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )
 #else
-#define DeBugLog(tmt, ...)
+#define DeBugLog(s, ... )
 #endif
+
 
 
 #define kScreen_Bounds [UIScreen mainScreen].bounds

@@ -14,5 +14,6 @@
 #import "Definations.h"
 #import <YYKit/YYKit.h>
 #import "NSObject+Common.h"
+#import "HYBNetworking.h"
 
 #endif /* Configer_pch */

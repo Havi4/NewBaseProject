@@ -20,7 +20,13 @@
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
         NSString *adversement = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"Adversement"];
         NSString *imageFile = [adversement stringByAppendingPathComponent:imageName];
-        
+        NSFileManager *fileManager = [[NSFileManager alloc] init];
+        if (![[NSFileManager defaultManager] fileExistsAtPath:adversement]) {
+            [fileManager createDirectoryAtPath:adversement withIntermediateDirectories:YES attributes:nil error:nil];
+            [fileManager createDirectoryAtPath:adversement withIntermediateDirectories:YES attributes:nil error:nil];
+        } else {
+            NSLog(@"FileDir is exists.");
+        }
         return imageFile;
     }
     
@@ -81,24 +87,34 @@
  */
 - (void)downloadAdImageWithUrl:(NSString *)imageUrl imageName:(NSString *)imageName
 {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    NSString *filePath = [self getFilePathWithImageName:imageName]; // 保存文件的名称
+    [HYBNetworking downloadWithUrl:imageUrl saveToPath:filePath progress:^(int64_t bytesRead, int64_t totalBytesRead) {
         
-        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
-        UIImage *image = [UIImage imageWithData:data];
-        
-        NSString *filePath = [self getFilePathWithImageName:imageName]; // 保存文件的名称
-        
-        if ([UIImagePNGRepresentation(image) writeToFile:filePath atomically:YES]) {// 保存成功
-            DeBugLog(@"保存成功");
-            [self deleteOldImage];
-            [kUserDefaults setValue:imageName forKey:adImageName];
-            [kUserDefaults synchronize];
-            // 如果有广告链接，将广告链接也保存下来
-        }else{
-            DeBugLog(@"保存失败");
-        }
-        
-    });
+    } success:^(id response) {
+        DeBugLog(@"保存成功");
+        [self deleteOldImage];
+        [kUserDefaults setValue:imageName forKey:adImageName];
+        [kUserDefaults synchronize];
+    } failure:^(NSError *error) {
+        DeBugLog(@"保存失败");
+    }];
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        
+//        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
+//        UIImage *image = [UIImage imageWithData:data];
+//        
+//        
+//        if ([UIImagePNGRepresentation(image) writeToFile:filePath atomically:YES]) {// 保存成功
+//            DeBugLog(@"保存成功");
+//            [self deleteOldImage];
+//            [kUserDefaults setValue:imageName forKey:adImageName];
+//            [kUserDefaults synchronize];
+//            // 如果有广告链接，将广告链接也保存下来
+//        }else{
+//            DeBugLog(@"保存失败");
+//        }
+//        
+//    });
 }
 
 

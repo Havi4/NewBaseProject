@@ -293,14 +293,14 @@ static inline NSString *cachePath() {
   
   if ([self baseUrl] == nil) {
     if ([NSURL URLWithString:url] == nil) {
-      HYBAppLog(@"URLString无效，无法生成URL。可能是URL中有中文，请尝试Encode URL");
+      DeBugLog(@"URLString无效，无法生成URL。可能是URL中有中文，请尝试Encode URL");
       return nil;
     }
   } else {
     NSURL *absoluteURL = [NSURL URLWithString:absolute];
     
     if (absoluteURL == nil) {
-      HYBAppLog(@"URLString无效，无法生成URL。可能是URL中有中文，请尝试Encode URL");
+      DeBugLog(@"URLString无效，无法生成URL。可能是URL中有中文，请尝试Encode URL");
       return nil;
     }
   }
@@ -497,7 +497,7 @@ static inline NSString *cachePath() {
                                  success:(HYBResponseSuccess)success
                                     fail:(HYBResponseFail)fail {
   if ([NSURL URLWithString:uploadingFile] == nil) {
-    HYBAppLog(@"uploadingFile无效，无法生成URL。请检查待上传文件是否存在");
+    DeBugLog(@"uploadingFile无效，无法生成URL。请检查待上传文件是否存在");
     return nil;
   }
   
@@ -509,7 +509,7 @@ static inline NSString *cachePath() {
   }
   
   if (uploadURL == nil) {
-    HYBAppLog(@"URLString无效，无法生成URL。可能是URL中有中文或特殊字符，请尝试Encode URL");
+    DeBugLog(@"URLString无效，无法生成URL。可能是URL中有中文或特殊字符，请尝试Encode URL");
     return nil;
   }
   
@@ -559,12 +559,12 @@ static inline NSString *cachePath() {
                                   fail:(HYBResponseFail)fail {
   if ([self baseUrl] == nil) {
     if ([NSURL URLWithString:url] == nil) {
-      HYBAppLog(@"URLString无效，无法生成URL。可能是URL中有中文，请尝试Encode URL");
+      DeBugLog(@"URLString无效，无法生成URL。可能是URL中有中文，请尝试Encode URL");
       return nil;
     }
   } else {
     if ([NSURL URLWithString:[NSString stringWithFormat:@"%@%@", [self baseUrl], url]] == nil) {
-      HYBAppLog(@"URLString无效，无法生成URL。可能是URL中有中文，请尝试Encode URL");
+      DeBugLog(@"URLString无效，无法生成URL。可能是URL中有中文，请尝试Encode URL");
       return nil;
     }
   }
@@ -627,12 +627,12 @@ static inline NSString *cachePath() {
                                failure:(HYBResponseFail)failure {
   if ([self baseUrl] == nil) {
     if ([NSURL URLWithString:url] == nil) {
-      HYBAppLog(@"URLString无效，无法生成URL。可能是URL中有中文，请尝试Encode URL");
+      DeBugLog(@"URLString无效，无法生成URL。可能是URL中有中文，请尝试Encode URL");
       return nil;
     }
   } else {
     if ([NSURL URLWithString:[NSString stringWithFormat:@"%@%@", [self baseUrl], url]] == nil) {
-      HYBAppLog(@"URLString无效，无法生成URL。可能是URL中有中文，请尝试Encode URL");
+      DeBugLog(@"URLString无效，无法生成URL。可能是URL中有中文，请尝试Encode URL");
       return nil;
     }
   }
@@ -657,14 +657,14 @@ static inline NSString *cachePath() {
       }
       
       if ([self isDebug]) {
-        HYBAppLog(@"Download success for url %@",
+        DeBugLog(@"Download success for url %@",
                   [self absoluteUrlWithPath:url]);
       }
     } else {
       [self handleCallbackWithError:error fail:failure];
       
       if ([self isDebug]) {
-        HYBAppLog(@"Download fail for url %@, reason : %@",
+        DeBugLog(@"Download fail for url %@, reason : %@",
                   [self absoluteUrlWithPath:url],
                   [error description]);
       }
@@ -776,8 +776,8 @@ static inline NSString *cachePath() {
 }
 
 + (void)logWithSuccessResponse:(id)response url:(NSString *)url params:(NSDictionary *)params {
-  HYBAppLog(@"\n");
-  HYBAppLog(@"\nRequest success, URL: %@\n params:%@\n response:%@\n\n",
+  DeBugLog(@"\n");
+  DeBugLog(@"\nRequest success, URL: %@\n params:%@\n response:%@\n\n",
             [self generateGETAbsoluteURL:url params:params],
             params,
             [self tryToParseData:response]);
@@ -790,14 +790,14 @@ static inline NSString *cachePath() {
     params = @"";
   }
   
-  HYBAppLog(@"\n");
+  DeBugLog(@"\n");
   if ([error code] == NSURLErrorCancelled) {
-    HYBAppLog(@"\nRequest was canceled mannully, URL: %@ %@%@\n\n",
+    DeBugLog(@"\nRequest was canceled mannully, URL: %@ %@%@\n\n",
               [self generateGETAbsoluteURL:url params:params],
               format,
               params);
   } else {
-    HYBAppLog(@"\nRequest error, URL: %@ %@%@\n errorInfos:%@\n\n",
+    DeBugLog(@"\nRequest error, URL: %@ %@%@\n errorInfos:%@\n\n",
               [self generateGETAbsoluteURL:url params:params],
               format,
               params,
@@ -908,7 +908,7 @@ static inline NSString *cachePath() {
     NSData *data = [[NSFileManager defaultManager] contentsAtPath:path];
     if (data) {
       cacheData = data;
-      HYBAppLog(@"Read data from cache for url: %@\n", url);
+      DeBugLog(@"Read data from cache for url: %@\n", url);
     }
   }
   
@@ -927,7 +927,7 @@ static inline NSString *cachePath() {
                                                  attributes:nil
                                                       error:&error];
       if (error) {
-        HYBAppLog(@"create cache dir error: %@\n", error);
+        DeBugLog(@"create cache dir error: %@\n", error);
         return;
       }
     }
@@ -949,9 +949,9 @@ static inline NSString *cachePath() {
     if (data && error == nil) {
       BOOL isOk = [[NSFileManager defaultManager] createFileAtPath:path contents:data attributes:nil];
       if (isOk) {
-        HYBAppLog(@"cache file ok for request: %@\n", absoluteURL);
+        DeBugLog(@"cache file ok for request: %@\n", absoluteURL);
       } else {
-        HYBAppLog(@"cache file error for request: %@\n", absoluteURL);
+        DeBugLog(@"cache file error for request: %@\n", absoluteURL);
       }
     }
   }
