@@ -98,23 +98,6 @@
     } failure:^(NSError *error) {
         DeBugLog(@"保存失败");
     }];
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//        
-//        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageUrl]];
-//        UIImage *image = [UIImage imageWithData:data];
-//        
-//        
-//        if ([UIImagePNGRepresentation(image) writeToFile:filePath atomically:YES]) {// 保存成功
-//            DeBugLog(@"保存成功");
-//            [self deleteOldImage];
-//            [kUserDefaults setValue:imageName forKey:adImageName];
-//            [kUserDefaults synchronize];
-//            // 如果有广告链接，将广告链接也保存下来
-//        }else{
-//            DeBugLog(@"保存失败");
-//        }
-//        
-//    });
 }
 
 
