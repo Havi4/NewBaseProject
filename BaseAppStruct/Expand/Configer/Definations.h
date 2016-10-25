@@ -14,9 +14,11 @@
 
 #define kAppBaseURL @"http://imgsrc.baidu.com/forum/pic/item/"
 #define kAppTestBaseURL @"http://webservice.meddo99.com:9001/"
+
+
 #define kKeyWindow [UIApplication sharedApplication].keyWindow
 #define kUserDefaults [NSUserDefaults standardUserDefaults]
-#define kAdImageName @"adImageName";
+#define kAccessTocken @"A29#XXFDs1-FDKSD-JGLjx2";
 
 #ifdef DEBUG
 #define DeBugLog(s, ... ) NSLog( @"[%@ in line %d] ===============>%@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )

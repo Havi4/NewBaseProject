@@ -108,7 +108,7 @@ static NSUInteger sg_maxCacheSize = 0;
 }
 
 static inline NSString *cachePath() {
-  return [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/HYBNetworkingCaches"];
+  return [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/HaviNetworkingCaches"];
 }
 
 + (void)clearCaches {
