@@ -726,7 +726,7 @@ static inline NSString *cachePath() {
         }
       }
       
-      manager.requestSerializer.stringEncoding = NSUTF8StringEncoding;
+//      manager.requestSerializer.stringEncoding = NSUTF8StringEncoding;
       
       
       for (NSString *key in sg_httpHeaders.allKeys) {

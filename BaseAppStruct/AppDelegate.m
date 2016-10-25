@@ -10,6 +10,7 @@
 #import "MainViewController.h"
 #import "AdvertisementView.h"
 #import "CYLTabBarControllerConfig.h"
+#import "TabPlusButtonSubclass.h"
 
 @interface AppDelegate ()
 
@@ -20,14 +21,38 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    #pragma mark 进行广告位
-    [self setAdvertisement];
+    [TabPlusButtonSubclass registerPlusButton];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     #pragma mark 设置tabbar
     CYLTabBarControllerConfig *tabBarControllerConfig = [[CYLTabBarControllerConfig alloc] init];
     self.window.rootViewController = tabBarControllerConfig.tabBarController;
     [self.window makeKeyAndVisible];
+   
+#pragma mark 进行广告位
+    [self initAllRequestParams];
+    [self setAdvertisement];
     return YES;
+}
+
+- (void)initAllRequestParams
+{
+    //设置baseUrl
+    [HYBNetworking updateBaseUrl:kAppBaseURL];
+    //请求取消时间
+    [HYBNetworking setTimeout:30];
+    //设置没有网络的时候从本地读取数据
+    [HYBNetworking obtainDataFromLocalWhenNetworkUnconnected:YES];
+    //缓存get请求，
+    [HYBNetworking cacheGetRequest:YES shoulCachePost:NO];
+    //debug模式。放心使用，使用debug
+    [HYBNetworking enableInterfaceDebug:YES];
+    //配置请求和接受格式，json
+    [HYBNetworking configRequestType:kHYBRequestTypeJSON responseType:kHYBResponseTypeJSON shouldAutoEncodeUrl:NO callbackOnCancelRequest:YES];
+    //配置请求头
+    [HYBNetworking configCommonHttpHeaders:@{
+                                             @"AccessToken" : kAccessTocken,
+                                             @"Accept":@"application/json"
+                                             }];
 }
 
 #pragma mark 设置广告

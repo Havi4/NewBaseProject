@@ -7,7 +7,6 @@
 //
 
 #ifndef ModelHeader_h
-#define ModelHeader_h
 
 #import "ServerTimeModel.h"
 #import "AddUserModel.h"
@@ -25,5 +24,9 @@
 #import "WeatherModel.h"
 #import "ArticleModel.h"
 #import "AccessTockenModel.h"
+
+#define ModelHeader_h
+
+
 
 #endif /* ModelHeader_h */

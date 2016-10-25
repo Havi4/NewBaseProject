@@ -21,9 +21,9 @@
 #pragma mark -
 #pragma mark - Life Cycle
 
-+ (void)load {
-    [super registerPlusButton];
-}
+//+ (void)load {
+//    [super registerPlusButton];
+//}
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {

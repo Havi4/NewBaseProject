@@ -58,4 +58,7 @@ typedef NetDownloadProgress HYBPostProgress;
 //请求accessTocken
 - (void)requestAccessTockenWithParams:(NSDictionary *)params withBlock:(void (^)(AccessTockenModel *serVerTime , NSError *error))blcok;
 
+//获取用户信息
+
+- (void)requestUserInfoWithParam:(NSDictionary *)params andBlock:(void (^)(UserInfoDetailModel *userInfo))success fail:(void (^)(NSError *error))fail;
 @end

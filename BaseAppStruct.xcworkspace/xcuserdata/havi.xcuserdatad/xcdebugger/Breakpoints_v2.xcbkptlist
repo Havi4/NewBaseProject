@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BaseAppStruct/Vender/Advertisment/NSObject+AdvertisementView.m"
-            timestampString = "498665947.532729"
+            filePath = "BaseAppStruct/Mine/MineStore.m"
+            timestampString = "499094940.170528"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "-getAdvertisingImage"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "-_requiredMethod"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,46 +25,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BaseAppStruct/Vender/Advertisment/NSObject+AdvertisementView.m"
-            timestampString = "498666102.311626"
+            filePath = "BaseAppStruct/Expand/NetWork/HYBNetworking/HYBNetworking.m"
+            timestampString = "499095340.49864"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "-downloadAdImageWithUrl:imageName:"
+            startingLineNumber = "293"
+            endingLineNumber = "293"
+            landmarkName = "+_requestWithUrl:refreshCache:httpMedth:params:progress:success:fail:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[NSObject(AdvertisementView) downloadAdImageWithUrl:imageName:]"
-                  moduleName = "BaseAppStruct"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/havi/Desktop/%E9%A1%B9%E7%9B%AE/%E7%BB%83%E4%B9%A0/BaseAppStruct/BaseAppStruct/Vender/Advertisment/NSObject+AdvertisementView.m"
-                  timestampString = "498666556.540039"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "91"
-                  endingLineNumber = "91"
-                  offsetFromSymbolStart = "133">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__64-[NSObject(AdvertisementView) downloadAdImageWithUrl:imageName:]_block_invoke"
-                  moduleName = "BaseAppStruct"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/havi/Desktop/%E9%A1%B9%E7%9B%AE/%E7%BB%83%E4%B9%A0/BaseAppStruct/BaseAppStruct/Vender/Advertisment/NSObject+AdvertisementView.m"
-                  timestampString = "498666556.542586"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "20">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BaseAppStruct/Expand/NetWork/HYBNetworking/HYBNetworking.m"
+            timestampString = "499095464.936671"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "353"
+            endingLineNumber = "353"
+            landmarkName = "+_requestWithUrl:refreshCache:httpMedth:params:progress:success:fail:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BaseAppStruct/Expand/NetWork/HYBNetworking/HYBNetworking.m"
+            timestampString = "499095471.820488"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "369"
+            endingLineNumber = "369"
+            landmarkName = "+_requestWithUrl:refreshCache:httpMedth:params:progress:success:fail:"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

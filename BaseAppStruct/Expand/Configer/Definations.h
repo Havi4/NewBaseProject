@@ -12,13 +12,15 @@
 
 #endif /* Definations_h */
 
-#define kAppBaseURL @"http://imgsrc.baidu.com/forum/pic/item/"
+#define kAppBaseURL @"http://webservice.meddo99.com:9000/"
 #define kAppTestBaseURL @"http://webservice.meddo99.com:9001/"
 
 
 #define kKeyWindow [UIApplication sharedApplication].keyWindow
 #define kUserDefaults [NSUserDefaults standardUserDefaults]
+
 #define kAccessTocken @"A29#XXFDs1-FDKSD-JGLjx2"
+#define kTestUserID @"meddo99.com$13122785292"
 
 #ifdef DEBUG
 #define DeBugLog(s, ... ) NSLog( @"[%@ in line %d] ===============>%@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )

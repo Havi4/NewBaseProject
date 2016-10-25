@@ -87,6 +87,7 @@
 		57F59DCE1DBF3438001D64EA /* MIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F59DB71DBF3438001D64EA /* MIViewController.m */; };
 		57F59DCF1DBF3438001D64EA /* UIView+MIPipeline.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F59DB91DBF3438001D64EA /* UIView+MIPipeline.m */; };
 		57F59DD21DBF35B5001D64EA /* TabPlusButtonSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F59DD11DBF35B5001D64EA /* TabPlusButtonSubclass.m */; };
+		57F59DD51DBF6042001D64EA /* MineService.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F59DD41DBF6042001D64EA /* MineService.m */; };
 		6292224149693A501FB6C4B5 /* libPods-ZZHTabStruct.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 796F2BD85BDEE6B8B9A752FF /* libPods-ZZHTabStruct.a */; };
 		E08A755EB156C79AE4B17315 /* libPods-BaseAppStruct.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEA440E7E3119120068353F /* libPods-BaseAppStruct.a */; };
 /* End PBXBuildFile section */
@@ -278,6 +279,8 @@
 		57F59DB91DBF3438001D64EA /* UIView+MIPipeline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MIPipeline.m"; sourceTree = "<group>"; };
 		57F59DD01DBF35B5001D64EA /* TabPlusButtonSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabPlusButtonSubclass.h; sourceTree = "<group>"; };
 		57F59DD11DBF35B5001D64EA /* TabPlusButtonSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabPlusButtonSubclass.m; sourceTree = "<group>"; };
+		57F59DD31DBF6042001D64EA /* MineService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineService.h; sourceTree = "<group>"; };
+		57F59DD41DBF6042001D64EA /* MineService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineService.m; sourceTree = "<group>"; };
 		796F2BD85BDEE6B8B9A752FF /* libPods-ZZHTabStruct.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZZHTabStruct.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6A7C2AF06A8FDE744F7187 /* Pods-ZZHTabStruct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZHTabStruct.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZZHTabStruct/Pods-ZZHTabStruct.debug.xcconfig"; sourceTree = "<group>"; };
 		BEEA440E7E3119120068353F /* libPods-BaseAppStruct.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseAppStruct.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -648,6 +651,8 @@
 				57F59D791DBF3364001D64EA /* MinePipeline.m */,
 				57F59D7A1DBF3364001D64EA /* MineStore.h */,
 				57F59D7B1DBF3364001D64EA /* MineStore.m */,
+				57F59DD31DBF6042001D64EA /* MineService.h */,
+				57F59DD41DBF6042001D64EA /* MineService.m */,
 				57F59D7C1DBF3364001D64EA /* MineView.h */,
 				57F59D7D1DBF3364001D64EA /* MineView.m */,
 				57F59D7E1DBF3364001D64EA /* MineViewController.h */,
@@ -970,6 +975,7 @@
 				57F59DCD1DBF3438001D64EA /* MIStore.m in Sources */,
 				57F59D811DBF3364001D64EA /* MineStore.m in Sources */,
 				570F2DA11DBEF9FA0008F9FC /* BaseModel.m in Sources */,
+				57F59DD51DBF6042001D64EA /* MineService.m in Sources */,
 				57F59D2D1DBF21DA001D64EA /* UIViewController+CYLTabBarControllerExtention.m in Sources */,
 				57F59D321DBF26AD001D64EA /* CYLTabBarControllerConfig.m in Sources */,
 				57F59D731DBF32AF001D64EA /* ReportPipeline.m in Sources */,

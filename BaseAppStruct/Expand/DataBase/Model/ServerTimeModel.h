@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
 //该model只是转换属性名和json中key相同的情况。
+#import "BaseModel.h"
 
 @interface ServerTimeModel : BaseModel
 

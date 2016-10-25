@@ -10,4 +10,8 @@
 
 @implementation MinePipeline
 
+//- (NSDictionary *)contextForSearch {
+//    return @{@"photo": self.inputSearchText ?: @""};
+//}
+
 @end

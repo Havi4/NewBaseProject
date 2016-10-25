@@ -21,7 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    // Add you own code 
+    // Add you own code
+    [self.store fetchData];
 }
 
 - (void)setupPipeline:(__kindof MIPipeline *)pipeline {
