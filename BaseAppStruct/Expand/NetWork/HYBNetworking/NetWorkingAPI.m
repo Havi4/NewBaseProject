@@ -112,15 +112,15 @@ static NetWorkingAPI *_netWorkClient;
 #pragma mark 业务需求
 
 //获取服务器时间
-- (void)requestServerTimeWithBlock:(void (^)(ServerTimeModel *serVerTime , NSError *error))blcok
+- (void)requestServerTimeWithBlock:(void (^)(ServerTimeModel *serVerTime))success fail:(void (^)(NSError *error))fail
 {
     NSString *aPath = @"v1/app/GetServerTime";
     [HYBNetworking getWithUrl:aPath refreshCache:NO success:^(id response) {
         NSDictionary *dic = (NSDictionary *)response;
         ServerTimeModel *serverModel = [ServerTimeModel modelWithDictionary:dic];
-        blcok(serverModel,nil);
+        success(serverModel);
     } fail:^(NSError *error) {
-        blcok(nil,error);
+        fail(error);
     }];
 }
 

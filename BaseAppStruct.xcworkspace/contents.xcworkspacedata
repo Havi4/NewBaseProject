@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:BaseAppStruct.xcodeproj">
+      location = "group:/Users/havi/Desktop/&#x9879;&#x76ee;/&#x7ec3;&#x4e60;/BaseAppStruct/ZZHTabStruct.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

@@ -53,6 +53,9 @@ typedef NetDownloadProgress HYBPostProgress;
 
 #pragma mark 业务需求
 //获取服务器时间
-- (void)requestServerTimeWithBlock:(void (^)(ServerTimeModel *serVerTime , NSError *error))blcok;
+- (void)requestServerTimeWithBlock:(void (^)(ServerTimeModel *serVerTime))success fail:(void (^)(NSError *error))fail;
+
+//请求accessTocken
+- (void)requestAccessTockenWithParams:(NSDictionary *)params withBlock:(void (^)(AccessTockenModel *serVerTime , NSError *error))blcok;
 
 @end

@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 #import "AdvertisementView.h"
+#import "CYLTabBarControllerConfig.h"
+
 @interface AppDelegate ()
 
 @end
@@ -18,13 +20,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [self setNetWorking];
+    #pragma mark 进行广告位
+    [self setAdvertisement];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    UIViewController *main = [[MainViewController alloc]init];
-    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:main];
+    #pragma mark 设置tabbar
+    CYLTabBarControllerConfig *tabBarControllerConfig = [[CYLTabBarControllerConfig alloc] init];
+    self.window.rootViewController = tabBarControllerConfig.tabBarController;
     [self.window makeKeyAndVisible];
-#pragma mark 进行广告位
+    return YES;
+}
+
+#pragma mark 设置广告
+
+- (void)setAdvertisement
+{
     // 1.判断沙盒中是否存在广告图片，如果存在，直接显示
     NSString *filePath = [self getFilePathWithImageName:[kUserDefaults valueForKey:adImageName]];
     
@@ -38,19 +47,8 @@
     }
     // 2.无论沙盒中是否存在广告图片，都需要重新调用广告接口，判断广告是否更新
     [self getAdvertisingImage];
-#pragma mark end
 
-    return YES;
 }
-
-#pragma setting networking
-
-- (void)setNetWorking
-{
-    [HYBNetworking updateBaseUrl:kAppBaseURL];
-}
-
-#pragma end
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

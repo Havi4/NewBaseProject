@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2C2ACA861D191D0900320086"
-               BuildableName = "BaseAppStruct.app"
-               BlueprintName = "BaseAppStruct"
-               ReferencedContainer = "container:BaseAppStruct.xcodeproj">
+               BuildableName = "ZZHTabStruct.app"
+               BlueprintName = "ZZHTabStruct"
+               ReferencedContainer = "container:ZZHTabStruct.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2C2ACA9F1D191D0900320086"
-               BuildableName = "BaseAppStructTests.xctest"
-               BlueprintName = "BaseAppStructTests"
-               ReferencedContainer = "container:BaseAppStruct.xcodeproj">
+               BuildableName = "ZZHTabStructTests.xctest"
+               BlueprintName = "ZZHTabStructTests"
+               ReferencedContainer = "container:ZZHTabStruct.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2C2ACAAA1D191D0900320086"
-               BuildableName = "BaseAppStructUITests.xctest"
-               BlueprintName = "BaseAppStructUITests"
-               ReferencedContainer = "container:BaseAppStruct.xcodeproj">
+               BuildableName = "ZZHTabStructUITests.xctest"
+               BlueprintName = "ZZHTabStructUITests"
+               ReferencedContainer = "container:ZZHTabStruct.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C2ACA861D191D0900320086"
-            BuildableName = "BaseAppStruct.app"
-            BlueprintName = "BaseAppStruct"
-            ReferencedContainer = "container:BaseAppStruct.xcodeproj">
+            BuildableName = "ZZHTabStruct.app"
+            BlueprintName = "ZZHTabStruct"
+            ReferencedContainer = "container:ZZHTabStruct.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C2ACA861D191D0900320086"
-            BuildableName = "BaseAppStruct.app"
-            BlueprintName = "BaseAppStruct"
-            ReferencedContainer = "container:BaseAppStruct.xcodeproj">
+            BuildableName = "ZZHTabStruct.app"
+            BlueprintName = "ZZHTabStruct"
+            ReferencedContainer = "container:ZZHTabStruct.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2C2ACA861D191D0900320086"
-            BuildableName = "BaseAppStruct.app"
-            BlueprintName = "BaseAppStruct"
-            ReferencedContainer = "container:BaseAppStruct.xcodeproj">
+            BuildableName = "ZZHTabStruct.app"
+            BlueprintName = "ZZHTabStruct"
+            ReferencedContainer = "container:ZZHTabStruct.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
