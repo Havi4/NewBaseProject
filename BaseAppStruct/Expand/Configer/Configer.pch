@@ -17,5 +17,6 @@
 #import "HYBNetworking.h"
 #import "BaseModel.h"
 #import "Minya.h"
+#import <Masonry/Masonry.h>
 
 #endif /* Configer_pch */

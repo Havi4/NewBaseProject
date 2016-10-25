@@ -13,6 +13,8 @@
 @interface MineView ()
 
 @property (nonatomic, strong) MinePipeline *pipeline;
+//private
+
 
 @end
 

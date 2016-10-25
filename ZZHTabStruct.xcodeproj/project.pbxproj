@@ -87,6 +87,7 @@
 		57F59DCE1DBF3438001D64EA /* MIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F59DB71DBF3438001D64EA /* MIViewController.m */; };
 		57F59DCF1DBF3438001D64EA /* UIView+MIPipeline.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F59DB91DBF3438001D64EA /* UIView+MIPipeline.m */; };
 		57F59DD21DBF35B5001D64EA /* TabPlusButtonSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F59DD11DBF35B5001D64EA /* TabPlusButtonSubclass.m */; };
+		6292224149693A501FB6C4B5 /* libPods-ZZHTabStruct.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 796F2BD85BDEE6B8B9A752FF /* libPods-ZZHTabStruct.a */; };
 		E08A755EB156C79AE4B17315 /* libPods-BaseAppStruct.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEA440E7E3119120068353F /* libPods-BaseAppStruct.a */; };
 /* End PBXBuildFile section */
 
@@ -108,6 +109,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E1D1EEA588EBAF937D425AA /* Pods-ZZHTabStruct.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZHTabStruct.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZZHTabStruct/Pods-ZZHTabStruct.release.xcconfig"; sourceTree = "<group>"; };
 		2C2ACA871D191D0900320086 /* ZZHTabStruct.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZHTabStruct.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C2ACA8B1D191D0900320086 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2C2ACA8D1D191D0900320086 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -276,8 +278,8 @@
 		57F59DB91DBF3438001D64EA /* UIView+MIPipeline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MIPipeline.m"; sourceTree = "<group>"; };
 		57F59DD01DBF35B5001D64EA /* TabPlusButtonSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabPlusButtonSubclass.h; sourceTree = "<group>"; };
 		57F59DD11DBF35B5001D64EA /* TabPlusButtonSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabPlusButtonSubclass.m; sourceTree = "<group>"; };
-		62B7D2A87D408762986A7529 /* Pods-BaseAppStruct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseAppStruct.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseAppStruct/Pods-BaseAppStruct.debug.xcconfig"; sourceTree = "<group>"; };
-		8ED55B3A7F21DD88C1A230F3 /* Pods-BaseAppStruct.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseAppStruct.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseAppStruct/Pods-BaseAppStruct.release.xcconfig"; sourceTree = "<group>"; };
+		796F2BD85BDEE6B8B9A752FF /* libPods-ZZHTabStruct.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZZHTabStruct.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B6A7C2AF06A8FDE744F7187 /* Pods-ZZHTabStruct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZHTabStruct.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZZHTabStruct/Pods-ZZHTabStruct.debug.xcconfig"; sourceTree = "<group>"; };
 		BEEA440E7E3119120068353F /* libPods-BaseAppStruct.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseAppStruct.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -287,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E08A755EB156C79AE4B17315 /* libPods-BaseAppStruct.a in Frameworks */,
+				6292224149693A501FB6C4B5 /* libPods-ZZHTabStruct.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,8 +378,8 @@
 		4D0FB379C655AEBD6B58D9CD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				62B7D2A87D408762986A7529 /* Pods-BaseAppStruct.debug.xcconfig */,
-				8ED55B3A7F21DD88C1A230F3 /* Pods-BaseAppStruct.release.xcconfig */,
+				9B6A7C2AF06A8FDE744F7187 /* Pods-ZZHTabStruct.debug.xcconfig */,
+				1E1D1EEA588EBAF937D425AA /* Pods-ZZHTabStruct.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -759,6 +762,7 @@
 			isa = PBXGroup;
 			children = (
 				BEEA440E7E3119120068353F /* libPods-BaseAppStruct.a */,
+				796F2BD85BDEE6B8B9A752FF /* libPods-ZZHTabStruct.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -770,12 +774,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C2ACAB41D191D0900320086 /* Build configuration list for PBXNativeTarget "ZZHTabStruct" */;
 			buildPhases = (
-				7AD354E68EA5046F5A0FDAD0 /* Check Pods Manifest.lock */,
+				7AD354E68EA5046F5A0FDAD0 /* [CP] Check Pods Manifest.lock */,
 				2C2ACA831D191D0900320086 /* Sources */,
 				2C2ACA841D191D0900320086 /* Frameworks */,
 				2C2ACA851D191D0900320086 /* Resources */,
-				F9EE090D035A19E868B9F38A /* Embed Pods Frameworks */,
-				DF1EF417FD83C25B1E7AD5E7 /* Copy Pods Resources */,
+				F9EE090D035A19E868B9F38A /* [CP] Embed Pods Frameworks */,
+				DF1EF417FD83C25B1E7AD5E7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -893,14 +897,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7AD354E68EA5046F5A0FDAD0 /* Check Pods Manifest.lock */ = {
+		7AD354E68EA5046F5A0FDAD0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -908,34 +912,34 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		DF1EF417FD83C25B1E7AD5E7 /* Copy Pods Resources */ = {
+		DF1EF417FD83C25B1E7AD5E7 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BaseAppStruct/Pods-BaseAppStruct-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZZHTabStruct/Pods-ZZHTabStruct-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F9EE090D035A19E868B9F38A /* Embed Pods Frameworks */ = {
+		F9EE090D035A19E868B9F38A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BaseAppStruct/Pods-BaseAppStruct-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZZHTabStruct/Pods-ZZHTabStruct-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1158,7 +1162,7 @@
 		};
 		2C2ACAB51D191D0900320086 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62B7D2A87D408762986A7529 /* Pods-BaseAppStruct.debug.xcconfig */;
+			baseConfigurationReference = 9B6A7C2AF06A8FDE744F7187 /* Pods-ZZHTabStruct.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1177,7 +1181,7 @@
 		};
 		2C2ACAB61D191D0900320086 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8ED55B3A7F21DD88C1A230F3 /* Pods-BaseAppStruct.release.xcconfig */;
+			baseConfigurationReference = 1E1D1EEA588EBAF937D425AA /* Pods-ZZHTabStruct.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";

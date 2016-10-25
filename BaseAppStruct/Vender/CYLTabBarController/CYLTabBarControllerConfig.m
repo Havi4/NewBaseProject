@@ -53,22 +53,32 @@
 }
 
 - (NSArray *)viewControllers {
-    HomeViewController *homeViewController = [[HomeViewController alloc] init];
+//    HomeViewController *homeViewController = [[HomeViewController alloc] init];
+    MIScene *scene = [MIScene sceneWithView:@"HomeView" controller:@"HomeViewController" store:@"HomeStore"];
+    UIViewController *homeViewController = [[MIMediator sharedMediator] viewControllerWithScene:scene context:nil];
     UIViewController *homeNavigationController = [[CYLBaseNavigationController alloc]
                                                    initWithRootViewController:homeViewController];
     
-    ReportViewController *reportViewController = [[ReportViewController alloc] init];
+//    ReportViewController *reportViewController = [[ReportViewController alloc] init];
+    MIScene *reportScene = [MIScene sceneWithView:@"ReportView" controller:@"ReportViewController" store:@"ReportStore"];
+    UIViewController *reportViewController = [[MIMediator sharedMediator] viewControllerWithScene:reportScene context:nil];
     UIViewController *reportNavigationController = [[CYLBaseNavigationController alloc]
                                                     initWithRootViewController:reportViewController];
     
-    MineViewController *mineViewController = [[MineViewController alloc] init];
+//    MineViewController *mineViewController = [[MineViewController alloc] init];
+    MIScene *MineScene = [MIScene sceneWithView:@"MineView" controller:@"MineViewController" store:@"MineStore"];
+    UIViewController *mineViewController = [[MIMediator sharedMediator] viewControllerWithScene:MineScene context:nil];
     UIViewController *mineNavigationController = [[CYLBaseNavigationController alloc]
                                                    initWithRootViewController:mineViewController];
     
-    MessageViewController *messageViewController = [[MessageViewController alloc] init];
+//    MessageViewController *messageViewController = [[MessageViewController alloc] init];
+    MIScene *messageScene = [MIScene sceneWithView:@"MessageView" controller:@"MessageViewController" store:@"MessageStore"];
+    UIViewController *messageViewController = [[MIMediator sharedMediator] viewControllerWithScene:messageScene context:nil];
     UIViewController *messageNavigationController = [[CYLBaseNavigationController alloc]
                                                     initWithRootViewController:messageViewController];
-    DevicesViewController *devicesViewController = [[DevicesViewController alloc] init];
+//    DevicesViewController *devicesViewController = [[DevicesViewController alloc] init];
+    MIScene *devicesScene = [MIScene sceneWithView:@"DevicesView" controller:@"DevicesViewController" store:@"DevicesStore"];
+    UIViewController *devicesViewController = [[MIMediator sharedMediator] viewControllerWithScene:devicesScene context:nil];
     UIViewController *deviceNavigationController = [[CYLBaseNavigationController alloc]
                                                     initWithRootViewController:devicesViewController];
     /**
