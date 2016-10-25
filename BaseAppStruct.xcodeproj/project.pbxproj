@@ -113,6 +113,7 @@
 		570F2D991DBEF9FA0008F9FC /* UserInfoDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoDetailModel.m; sourceTree = "<group>"; };
 		570F2D9A1DBEF9FA0008F9FC /* WeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherModel.h; sourceTree = "<group>"; };
 		570F2D9B1DBEF9FA0008F9FC /* WeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherModel.m; sourceTree = "<group>"; };
+		570F2DAF1DBEFAC10008F9FC /* ModelHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelHeader.h; sourceTree = "<group>"; };
 		579BD38B1DBA6D38005D072F /* NetWorkingAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkingAPI.h; sourceTree = "<group>"; };
 		579BD38C1DBA6D38005D072F /* NetWorkingAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkingAPI.m; sourceTree = "<group>"; };
 		57C8D1161DB8C29300EE5DA7 /* NSObject+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Common.h"; sourceTree = "<group>"; };
@@ -331,6 +332,7 @@
 				57C8D1201DB8C29300EE5DA7 /* HYBNetworking.m */,
 				579BD38B1DBA6D38005D072F /* NetWorkingAPI.h */,
 				579BD38C1DBA6D38005D072F /* NetWorkingAPI.m */,
+				570F2DAF1DBEFAC10008F9FC /* ModelHeader.h */,
 			);
 			path = HYBNetworking;
 			sourceTree = "<group>";

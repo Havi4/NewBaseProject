@@ -18,7 +18,7 @@
 
 #define kKeyWindow [UIApplication sharedApplication].keyWindow
 #define kUserDefaults [NSUserDefaults standardUserDefaults]
-#define kAccessTocken @"A29#XXFDs1-FDKSD-JGLjx2";
+#define kAccessTocken @"A29#XXFDs1-FDKSD-JGLjx2"
 
 #ifdef DEBUG
 #define DeBugLog(s, ... ) NSLog( @"[%@ in line %d] ===============>%@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )

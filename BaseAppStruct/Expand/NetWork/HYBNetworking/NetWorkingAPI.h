@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "HYBNetworking.h"
+#import "ModelHeader.h"
+
+typedef void (^NetDownloadProgress)(int64_t bytesRead,
+int64_t totalBytesRead);
+
+typedef NetDownloadProgress HYBGetProgress;
+typedef NetDownloadProgress HYBPostProgress;
 
 @interface NetWorkingAPI : NSObject
 
@@ -46,7 +52,7 @@
 - (void)cancelRequestWithURL:(NSString *)url;
 
 #pragma mark 业务需求
-
-
+//获取服务器时间
+- (void)requestServerTimeWithBlock:(void (^)(ServerTimeModel *serVerTime , NSError *error))blcok;
 
 @end
