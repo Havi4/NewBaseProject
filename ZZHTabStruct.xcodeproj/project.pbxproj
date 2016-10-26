@@ -88,6 +88,9 @@
 		57F59DCF1DBF3438001D64EA /* UIView+MIPipeline.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F59DB91DBF3438001D64EA /* UIView+MIPipeline.m */; };
 		57F59DD21DBF35B5001D64EA /* TabPlusButtonSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F59DD11DBF35B5001D64EA /* TabPlusButtonSubclass.m */; };
 		57F59DD51DBF6042001D64EA /* MineService.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F59DD41DBF6042001D64EA /* MineService.m */; };
+		57F59DDB1DC05BE9001D64EA /* BarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F59DD81DC05BE9001D64EA /* BarItem.m */; };
+		57F59DDC1DC05BE9001D64EA /* CBStoreHouseRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F59DDA1DC05BE9001D64EA /* CBStoreHouseRefreshControl.m */; };
+		57F59DDE1DC05C30001D64EA /* storehouse.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57F59DDD1DC05C30001D64EA /* storehouse.plist */; };
 		6292224149693A501FB6C4B5 /* libPods-ZZHTabStruct.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 796F2BD85BDEE6B8B9A752FF /* libPods-ZZHTabStruct.a */; };
 		E08A755EB156C79AE4B17315 /* libPods-BaseAppStruct.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEA440E7E3119120068353F /* libPods-BaseAppStruct.a */; };
 /* End PBXBuildFile section */
@@ -281,6 +284,11 @@
 		57F59DD11DBF35B5001D64EA /* TabPlusButtonSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabPlusButtonSubclass.m; sourceTree = "<group>"; };
 		57F59DD31DBF6042001D64EA /* MineService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineService.h; sourceTree = "<group>"; };
 		57F59DD41DBF6042001D64EA /* MineService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineService.m; sourceTree = "<group>"; };
+		57F59DD71DC05BE9001D64EA /* BarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarItem.h; sourceTree = "<group>"; };
+		57F59DD81DC05BE9001D64EA /* BarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarItem.m; sourceTree = "<group>"; };
+		57F59DD91DC05BE9001D64EA /* CBStoreHouseRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBStoreHouseRefreshControl.h; sourceTree = "<group>"; };
+		57F59DDA1DC05BE9001D64EA /* CBStoreHouseRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBStoreHouseRefreshControl.m; sourceTree = "<group>"; };
+		57F59DDD1DC05C30001D64EA /* storehouse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = storehouse.plist; sourceTree = "<group>"; };
 		796F2BD85BDEE6B8B9A752FF /* libPods-ZZHTabStruct.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZZHTabStruct.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6A7C2AF06A8FDE744F7187 /* Pods-ZZHTabStruct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZHTabStruct.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZZHTabStruct/Pods-ZZHTabStruct.debug.xcconfig"; sourceTree = "<group>"; };
 		BEEA440E7E3119120068353F /* libPods-BaseAppStruct.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseAppStruct.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -499,6 +507,7 @@
 		57C8D1241DB8C29E00EE5DA7 /* Vender(第三方) */ = {
 			isa = PBXGroup;
 			children = (
+				57F59DD61DC05BE9001D64EA /* CBRefresh */,
 				57F59D841DBF3438001D64EA /* Minya */,
 				57F59D201DBF21DA001D64EA /* CYLTabBarController */,
 				57C8D1251DB8C29E00EE5DA7 /* Advertisment */,
@@ -540,6 +549,7 @@
 		57C8D12E1DB8C3FC00EE5DA7 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				57F59DDD1DC05C30001D64EA /* storehouse.plist */,
 				2C2ACA9B1D191D0900320086 /* Info.plist */,
 				2C2ACA981D191D0900320086 /* LaunchScreen.storyboard */,
 			);
@@ -763,6 +773,17 @@
 			path = MVCS;
 			sourceTree = "<group>";
 		};
+		57F59DD61DC05BE9001D64EA /* CBRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				57F59DD71DC05BE9001D64EA /* BarItem.h */,
+				57F59DD81DC05BE9001D64EA /* BarItem.m */,
+				57F59DD91DC05BE9001D64EA /* CBStoreHouseRefreshControl.h */,
+				57F59DDA1DC05BE9001D64EA /* CBStoreHouseRefreshControl.m */,
+			);
+			path = CBRefresh;
+			sourceTree = "<group>";
+		};
 		DE84FF4062A43531F9563435 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -880,6 +901,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57F59DDE1DC05C30001D64EA /* storehouse.plist in Resources */,
 				2C2ACA9A1D191D0900320086 /* LaunchScreen.storyboard in Resources */,
 				2C2ACA971D191D0900320086 /* Assets.xcassets in Resources */,
 			);
@@ -1024,6 +1046,7 @@
 				570F2DAC1DBEF9FA0008F9FC /* TagListModel.m in Sources */,
 				2C2ACAD81D194ED100320086 /* MainViewController.m in Sources */,
 				2C2ACA8C1D191D0900320086 /* main.m in Sources */,
+				57F59DDB1DC05BE9001D64EA /* BarItem.m in Sources */,
 				570F2DAE1DBEF9FA0008F9FC /* WeatherModel.m in Sources */,
 				57F59DBF1DBF3438001D64EA /* EXTNil.m in Sources */,
 				57F59D2B1DBF21DA001D64EA /* CYLTabBar.m in Sources */,
@@ -1031,6 +1054,7 @@
 				57F59DD21DBF35B5001D64EA /* TabPlusButtonSubclass.m in Sources */,
 				57F59D681DBF32AF001D64EA /* HomeStore.m in Sources */,
 				570F2DA71DBEF9FA0008F9FC /* SensorDataModel.m in Sources */,
+				57F59DDC1DC05BE9001D64EA /* CBStoreHouseRefreshControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

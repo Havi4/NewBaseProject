@@ -9,12 +9,14 @@
 #import "MineView.h"
 #import "UIView+MIPipeline.h"
 #import "MinePipeline.h"
+#import "CBStoreHouseRefreshControl.h"
 
 @interface MineView ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) MinePipeline *pipeline;
 //private
 @property (nonatomic, strong) UITableView *userTableView;
+@property (nonatomic, strong) CBStoreHouseRefreshControl *storeHouseRefreshControl;
 
 @end
 
@@ -32,6 +34,7 @@
 {
     [self addSubview:self.userTableView];
     //
+    self.storeHouseRefreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.userTableView target:self refreshAction:@selector(refreshTriggered:) plist:@"storehouse" color:[UIColor whiteColor] lineWidth:1.5 dropHeight:80 scale:1 horizontalRandomness:150 reverseLoadingAnimation:YES internalAnimationFactor:0.5];
     [self.userTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);
     }];
@@ -75,10 +78,34 @@
     // Observe the flag property, and if data has been back from the server,
     // we can refresh the tableview.
     [MIObserve(self.pipeline, flagRequestFinished) changed:^(id  _Nonnull newValue) {
-        
         @strongify(self)
         [self.userTableView reloadData];
     }];
 }
+
+#pragma mark - Notifying refresh control of scrolling
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    [self.storeHouseRefreshControl scrollViewDidScroll];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    [self.storeHouseRefreshControl scrollViewDidEndDragging];
+}
+
+#pragma mark - Listening for the user to trigger a refresh
+
+- (void)refreshTriggered:(id)sender
+{
+    [self performSelector:@selector(finishRefreshControl) withObject:nil afterDelay:3 inModes:@[NSRunLoopCommonModes]];
+}
+
+- (void)finishRefreshControl
+{
+    [self.storeHouseRefreshControl finishingLoading];
+}
+
 
 @end
