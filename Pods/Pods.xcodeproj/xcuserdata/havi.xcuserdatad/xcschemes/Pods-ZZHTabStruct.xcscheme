@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B6C2AE8FB6617E3E1D72B7EE0F979761'
+               BlueprintIdentifier = 'F413ECCA4736B59728EB4C506D59132F'
                BlueprintName = 'Pods-ZZHTabStruct'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-ZZHTabStruct.a'>

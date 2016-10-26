@@ -34,7 +34,7 @@
 {
     [self addSubview:self.userTableView];
     //
-    self.storeHouseRefreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.userTableView target:self refreshAction:@selector(refreshTriggered:) plist:@"storehouse" color:[UIColor whiteColor] lineWidth:1.5 dropHeight:80 scale:1 horizontalRandomness:150 reverseLoadingAnimation:YES internalAnimationFactor:0.5];
+    self.storeHouseRefreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.userTableView target:self refreshAction:@selector(refreshTriggered:) plist:@"storehouse" color:[UIColor grayColor] lineWidth:1.5 dropHeight:80 scale:1 horizontalRandomness:150 reverseLoadingAnimation:YES internalAnimationFactor:0.5];
     [self.userTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);
     }];

@@ -21,6 +21,7 @@
 
 #define kAccessTocken @"A29#XXFDs1-FDKSD-JGLjx2"
 #define kTestUserID @"meddo99.com$13122785292"
+#define kAdvertismentTag @"kAdvertismentTag"
 
 #ifdef DEBUG
 #define DeBugLog(s, ... ) NSLog( @"[%@ in line %d] ===============>%@", [[NSString stringWithUTF8String:__FILE__] lastPathComponent], __LINE__, [NSString stringWithFormat:(s), ##__VA_ARGS__] )

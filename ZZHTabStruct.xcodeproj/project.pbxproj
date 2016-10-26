@@ -37,8 +37,9 @@
 		57C8D1211DB8C29300EE5DA7 /* NSObject+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C8D1171DB8C29300EE5DA7 /* NSObject+Common.m */; };
 		57C8D1221DB8C29300EE5DA7 /* BaseNetworkAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C8D11D1DB8C29300EE5DA7 /* BaseNetworkAPI.m */; };
 		57C8D1231DB8C29300EE5DA7 /* HYBNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C8D1201DB8C29300EE5DA7 /* HYBNetworking.m */; };
-		57C8D12A1DB8C29E00EE5DA7 /* AdvertisementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C8D1271DB8C29E00EE5DA7 /* AdvertisementView.m */; };
-		57C8D12B1DB8C29E00EE5DA7 /* NSObject+AdvertisementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C8D1291DB8C29E00EE5DA7 /* NSObject+AdvertisementView.m */; };
+		57E9C2701DC093DE00947BEE /* GetLaunchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E9C26B1DC093DE00947BEE /* GetLaunchImage.m */; };
+		57E9C2711DC093DE00947BEE /* IanAdsStartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E9C26D1DC093DE00947BEE /* IanAdsStartView.m */; };
+		57E9C2721DC093DE00947BEE /* IanClickImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E9C26F1DC093DE00947BEE /* IanClickImageView.m */; };
 		57F59D2A1DBF21DA001D64EA /* CYLPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F59D231DBF21DA001D64EA /* CYLPlusButton.m */; };
 		57F59D2B1DBF21DA001D64EA /* CYLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F59D251DBF21DA001D64EA /* CYLTabBar.m */; };
 		57F59D2C1DBF21DA001D64EA /* CYLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F59D271DBF21DA001D64EA /* CYLTabBarController.m */; };
@@ -178,10 +179,12 @@
 		57C8D11D1DB8C29300EE5DA7 /* BaseNetworkAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNetworkAPI.m; sourceTree = "<group>"; };
 		57C8D11F1DB8C29300EE5DA7 /* HYBNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBNetworking.h; sourceTree = "<group>"; };
 		57C8D1201DB8C29300EE5DA7 /* HYBNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBNetworking.m; sourceTree = "<group>"; };
-		57C8D1261DB8C29E00EE5DA7 /* AdvertisementView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvertisementView.h; sourceTree = "<group>"; };
-		57C8D1271DB8C29E00EE5DA7 /* AdvertisementView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvertisementView.m; sourceTree = "<group>"; };
-		57C8D1281DB8C29E00EE5DA7 /* NSObject+AdvertisementView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AdvertisementView.h"; sourceTree = "<group>"; };
-		57C8D1291DB8C29E00EE5DA7 /* NSObject+AdvertisementView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AdvertisementView.m"; sourceTree = "<group>"; };
+		57E9C26A1DC093DE00947BEE /* GetLaunchImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetLaunchImage.h; sourceTree = "<group>"; };
+		57E9C26B1DC093DE00947BEE /* GetLaunchImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetLaunchImage.m; sourceTree = "<group>"; };
+		57E9C26C1DC093DE00947BEE /* IanAdsStartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IanAdsStartView.h; sourceTree = "<group>"; };
+		57E9C26D1DC093DE00947BEE /* IanAdsStartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IanAdsStartView.m; sourceTree = "<group>"; };
+		57E9C26E1DC093DE00947BEE /* IanClickImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IanClickImageView.h; sourceTree = "<group>"; };
+		57E9C26F1DC093DE00947BEE /* IanClickImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IanClickImageView.m; sourceTree = "<group>"; };
 		57F59D211DBF21DA001D64EA /* CYLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLConstants.h; sourceTree = "<group>"; };
 		57F59D221DBF21DA001D64EA /* CYLPlusButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLPlusButton.h; sourceTree = "<group>"; };
 		57F59D231DBF21DA001D64EA /* CYLPlusButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLPlusButton.m; sourceTree = "<group>"; };
@@ -507,24 +510,13 @@
 		57C8D1241DB8C29E00EE5DA7 /* Vender(第三方) */ = {
 			isa = PBXGroup;
 			children = (
+				57E9C2691DC093DE00947BEE /* IanAdsStartView */,
 				57F59DD61DC05BE9001D64EA /* CBRefresh */,
 				57F59D841DBF3438001D64EA /* Minya */,
 				57F59D201DBF21DA001D64EA /* CYLTabBarController */,
-				57C8D1251DB8C29E00EE5DA7 /* Advertisment */,
 			);
 			name = "Vender(第三方)";
 			path = Vender;
-			sourceTree = "<group>";
-		};
-		57C8D1251DB8C29E00EE5DA7 /* Advertisment */ = {
-			isa = PBXGroup;
-			children = (
-				57C8D1261DB8C29E00EE5DA7 /* AdvertisementView.h */,
-				57C8D1271DB8C29E00EE5DA7 /* AdvertisementView.m */,
-				57C8D1281DB8C29E00EE5DA7 /* NSObject+AdvertisementView.h */,
-				57C8D1291DB8C29E00EE5DA7 /* NSObject+AdvertisementView.m */,
-			);
-			path = Advertisment;
 			sourceTree = "<group>";
 		};
 		57C8D12C1DB8C30800EE5DA7 /* Tools(工具) */ = {
@@ -572,6 +564,19 @@
 				2C2ACAD71D194ED100320086 /* MainViewController.m */,
 			);
 			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		57E9C2691DC093DE00947BEE /* IanAdsStartView */ = {
+			isa = PBXGroup;
+			children = (
+				57E9C26A1DC093DE00947BEE /* GetLaunchImage.h */,
+				57E9C26B1DC093DE00947BEE /* GetLaunchImage.m */,
+				57E9C26C1DC093DE00947BEE /* IanAdsStartView.h */,
+				57E9C26D1DC093DE00947BEE /* IanAdsStartView.m */,
+				57E9C26E1DC093DE00947BEE /* IanClickImageView.h */,
+				57E9C26F1DC093DE00947BEE /* IanClickImageView.m */,
+			);
+			path = IanAdsStartView;
 			sourceTree = "<group>";
 		};
 		57F59D201DBF21DA001D64EA /* CYLTabBarController */ = {
@@ -980,7 +985,6 @@
 				570F2DAA1DBEF9FA0008F9FC /* ServerTimeModelTwo.m in Sources */,
 				57F59D741DBF32AF001D64EA /* ReportStore.m in Sources */,
 				57F59D761DBF32AF001D64EA /* ReportViewController.m in Sources */,
-				57C8D12B1DB8C29E00EE5DA7 /* NSObject+AdvertisementView.m in Sources */,
 				57F59DC41DBF3438001D64EA /* NSInvocation+EXT.m in Sources */,
 				57F59DC21DBF3438001D64EA /* EXTScope.m in Sources */,
 				570F2DA31DBEF9FA0008F9FC /* FriendDeviceListModel.m in Sources */,
@@ -998,6 +1002,7 @@
 				57F59D811DBF3364001D64EA /* MineStore.m in Sources */,
 				570F2DA11DBEF9FA0008F9FC /* BaseModel.m in Sources */,
 				57F59DD51DBF6042001D64EA /* MineService.m in Sources */,
+				57E9C2701DC093DE00947BEE /* GetLaunchImage.m in Sources */,
 				57F59D2D1DBF21DA001D64EA /* UIViewController+CYLTabBarControllerExtention.m in Sources */,
 				57F59D321DBF26AD001D64EA /* CYLTabBarControllerConfig.m in Sources */,
 				57F59D731DBF32AF001D64EA /* ReportPipeline.m in Sources */,
@@ -1019,7 +1024,6 @@
 				570F2DA41DBEF9FA0008F9FC /* FriendListModel.m in Sources */,
 				57F59DC11DBF3438001D64EA /* EXTSafeCategory.m in Sources */,
 				57F59DC81DBF3438001D64EA /* MIMediator.m in Sources */,
-				57C8D12A1DB8C29E00EE5DA7 /* AdvertisementView.m in Sources */,
 				57F59D751DBF32AF001D64EA /* ReportView.m in Sources */,
 				57F59D671DBF32AF001D64EA /* HomePipeline.m in Sources */,
 				57F59D641DBF32AF001D64EA /* DevicesStore.m in Sources */,
@@ -1029,11 +1033,13 @@
 				570F2D9D1DBEF9FA0008F9FC /* AddUserModel.m in Sources */,
 				570F2DAB1DBEF9FA0008F9FC /* SleepQualityModel.m in Sources */,
 				57F59DCC1DBF3438001D64EA /* MIStorage.m in Sources */,
+				57E9C2711DC093DE00947BEE /* IanAdsStartView.m in Sources */,
 				2C2ACA8F1D191D0900320086 /* AppDelegate.m in Sources */,
 				57F59DBD1DBF3438001D64EA /* EXTADT.m in Sources */,
 				57F59D6A1DBF32AF001D64EA /* HomeViewController.m in Sources */,
 				57C8D1231DB8C29300EE5DA7 /* HYBNetworking.m in Sources */,
 				57F59D651DBF32AF001D64EA /* DevicesView.m in Sources */,
+				57E9C2721DC093DE00947BEE /* IanClickImageView.m in Sources */,
 				57F59D661DBF32AF001D64EA /* DevicesViewController.m in Sources */,
 				57F59DC01DBF3438001D64EA /* EXTRuntimeExtensions.m in Sources */,
 				57F59D801DBF3364001D64EA /* MinePipeline.m in Sources */,
@@ -1195,6 +1201,7 @@
 			baseConfigurationReference = 9B6A7C2AF06A8FDE744F7187 /* Pods-ZZHTabStruct.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = CF99UB3L46;
@@ -1214,6 +1221,7 @@
 			baseConfigurationReference = 1E1D1EEA588EBAF937D425AA /* Pods-ZZHTabStruct.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";

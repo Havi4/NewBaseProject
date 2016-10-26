@@ -8,9 +8,9 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
-#import "AdvertisementView.h"
 #import "CYLTabBarControllerConfig.h"
 #import "TabPlusButtonSubclass.h"
+#import "IanAdsStartView.h"
 
 @interface AppDelegate ()
 
@@ -59,20 +59,35 @@
 
 - (void)setAdvertisement
 {
-    // 1.判断沙盒中是否存在广告图片，如果存在，直接显示
-    NSString *filePath = [self getFilePathWithImageName:[kUserDefaults valueForKey:adImageName]];
-    
-    BOOL isExist = [self isFileExistWithFilePath:filePath];
-    if (isExist) {// 图片存在
-        
-        AdvertisementView *advertiseView = [[AdvertisementView alloc] initWithFrame:self.window.bounds];
-        advertiseView.filePath = filePath;
-        [advertiseView show];
-        
+    NSString *picUrl = @"http://785j3g.com1.z0.glb.clouddn.com/d659db60-f.jpg";
+    NSString *userDefaultKey = @"download_key";
+    if ([kUserDefaults stringForKey:kAdvertismentTag].length > 0) {
+        picUrl = [kUserDefaults stringForKey:kAdvertismentTag];
     }
-    // 2.无论沙盒中是否存在广告图片，都需要重新调用广告接口，判断广告是否更新
-    [self getAdvertisingImage];
+    if ([[kUserDefaults stringForKey:userDefaultKey] isEqualToString:@"1"]) {
+        IanAdsStartView *startView = [IanAdsStartView startAdsViewWithBgImageUrl:picUrl withClickImageAction:^{
+            DeBugLog(@"you tap an ad view");
+//            IANWebViewController *VC = [IANWebViewController new];
+//            VC.title = @"这可能是一个广告页面";
+//            [(UINavigationController *)self.window.rootViewController pushViewController:VC animated:YES];
+        }];
+        
+        [startView startAnimationTime:3 WithCompletionBlock:^(IanAdsStartView *startView){
+            DeBugLog(@"广告结束后，执行事件");
+            [self getADUrlFromServer];
+        }];
+    } else { // 第一次先下载广告
+        [IanAdsStartView downloadStartImage:picUrl];
+        
+        [[NSUserDefaults standardUserDefaults] setValue:@"1" forKey:userDefaultKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
 
+}
+
+- (void)getADUrlFromServer
+{
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
