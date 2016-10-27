@@ -41,3 +41,10 @@
 #define RGBA(R/*红*/, G/*绿*/, B/*蓝*/, A/*透明*/) \
 [UIColor colorWithRed:R/255.f green:G/255.f blue:B/255.f alpha:A]
 
+//背景色定义
+#define kOrangeColor [UIColor colorWithRed:1.000 green:0.635 blue:0.333 alpha:1.00]
+#define kBackgroundColor [UIColor colorWithRed:0.137 green:0.153 blue:0.165 alpha:1.00]
+#define kGreyColor [UIColor colorWithRed:0.804 green:0.816 blue:0.843 alpha:1.00]
+#define kWhiteColor [UIColor colorWithRed:1.000 green:1.000 blue:1.000 alpha:1.00]
+#define kContentColor [UIColor colorWithRed:0.161 green:0.173 blue:0.192 alpha:1.00]
+

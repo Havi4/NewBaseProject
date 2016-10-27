@@ -6,21 +6,7 @@
 //  Copyright © 2015 https://github.com/ChenYilong . All rights reserved.
 //
 #import "CYLTabBarControllerConfig.h"
-
-@import Foundation;
-@import UIKit;
-@interface CYLBaseNavigationController : UINavigationController
-@end
-@implementation CYLBaseNavigationController
-
-- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    if (self.viewControllers.count > 0) {
-        viewController.hidesBottomBarWhenPushed = YES;
-    }
-    [super pushViewController:viewController animated:animated];
-}
-
-@end
+#import "CYNavigationViewController.h"
 
 //View Controllers
 #import "HomeViewController.h"
@@ -53,33 +39,24 @@
 }
 
 - (NSArray *)viewControllers {
-//    HomeViewController *homeViewController = [[HomeViewController alloc] init];
-    MIScene *scene = [MIScene sceneWithView:@"HomeView" controller:@"HomeViewController" store:@"HomeStore"];
-    UIViewController *homeViewController = [[MIMediator sharedMediator] viewControllerWithScene:scene context:nil];
-    UIViewController *homeNavigationController = [[CYLBaseNavigationController alloc]
-                                                   initWithRootViewController:homeViewController];
     
-//    ReportViewController *reportViewController = [[ReportViewController alloc] init];
     MIScene *reportScene = [MIScene sceneWithView:@"ReportView" controller:@"ReportViewController" store:@"ReportStore"];
     UIViewController *reportViewController = [[MIMediator sharedMediator] viewControllerWithScene:reportScene context:nil];
-    UIViewController *reportNavigationController = [[CYLBaseNavigationController alloc]
+    UIViewController *reportNavigationController = [[CYNavigationViewController alloc]
                                                     initWithRootViewController:reportViewController];
     
-//    MineViewController *mineViewController = [[MineViewController alloc] init];
     MIScene *MineScene = [MIScene sceneWithView:@"MineView" controller:@"MineViewController" store:@"MineStore"];
     UIViewController *mineViewController = [[MIMediator sharedMediator] viewControllerWithScene:MineScene context:nil];
-    UIViewController *mineNavigationController = [[CYLBaseNavigationController alloc]
+    UIViewController *mineNavigationController = [[CYNavigationViewController alloc]
                                                    initWithRootViewController:mineViewController];
     
-//    MessageViewController *messageViewController = [[MessageViewController alloc] init];
     MIScene *messageScene = [MIScene sceneWithView:@"MessageView" controller:@"MessageViewController" store:@"MessageStore"];
     UIViewController *messageViewController = [[MIMediator sharedMediator] viewControllerWithScene:messageScene context:nil];
-    UIViewController *messageNavigationController = [[CYLBaseNavigationController alloc]
+    UIViewController *messageNavigationController = [[CYNavigationViewController alloc]
                                                     initWithRootViewController:messageViewController];
-//    DevicesViewController *devicesViewController = [[DevicesViewController alloc] init];
     MIScene *devicesScene = [MIScene sceneWithView:@"DevicesView" controller:@"DevicesViewController" store:@"DevicesStore"];
     UIViewController *devicesViewController = [[MIMediator sharedMediator] viewControllerWithScene:devicesScene context:nil];
-    UIViewController *deviceNavigationController = [[CYLBaseNavigationController alloc]
+    UIViewController *deviceNavigationController = [[CYNavigationViewController alloc]
                                                     initWithRootViewController:devicesViewController];
     /**
      * 以下两行代码目的在于手动设置让TabBarItem只显示图标，不显示文字，并让图标垂直居中。
@@ -91,7 +68,6 @@
     NSArray *viewControllers = @[
                                  reportNavigationController,
                                  deviceNavigationController,
-                                 homeNavigationController,
                                  messageNavigationController,
                                  mineNavigationController
                                  ];
@@ -101,23 +77,23 @@
 - (NSArray *)tabBarItemsAttributesForController {
     NSDictionary *firstTabBarItemsAttributes = @{
                                                  CYLTabBarItemTitle : @"报告",
-                                                 CYLTabBarItemImage : @"home_normal",
-                                                 CYLTabBarItemSelectedImage : @"home_highlight",
+                                                 CYLTabBarItemImage : @"report_normal",
+                                                 CYLTabBarItemSelectedImage : @"report_highlight",
                                                  };
     NSDictionary *secondTabBarItemsAttributes = @{
                                                   CYLTabBarItemTitle : @"设备",
-                                                  CYLTabBarItemImage : @"mycity_normal",
-                                                  CYLTabBarItemSelectedImage : @"mycity_highlight",
+                                                  CYLTabBarItemImage : @"device_normal",
+                                                  CYLTabBarItemSelectedImage : @"device_highlight",
                                                   };
-    NSDictionary *thirdTabBarItemsAttributes = @{
-                                                 CYLTabBarItemTitle : @"首页",
-                                                 CYLTabBarItemImage : @"message_normal",
-                                                 CYLTabBarItemSelectedImage : @"message_highlight",
-                                                 };
+//    NSDictionary *thirdTabBarItemsAttributes = @{
+//                                                 CYLTabBarItemTitle : @"首页",
+//                                                 CYLTabBarItemImage : @"message_normal",
+//                                                 CYLTabBarItemSelectedImage : @"message_highlight",
+//                                                 };
     NSDictionary *fourthTabBarItemsAttributes = @{
-                                                  CYLTabBarItemTitle : @"消息",
-                                                  CYLTabBarItemImage : @"account_normal",
-                                                  CYLTabBarItemSelectedImage : @"account_highlight"
+                                                  CYLTabBarItemTitle : @"问诊",
+                                                  CYLTabBarItemImage : @"doc_normal",
+                                                  CYLTabBarItemSelectedImage : @"doc_highlight"
                                                   };
     NSDictionary *fiveTabBarItemsAttributes = @{
                                                   CYLTabBarItemTitle : @"我的",
@@ -127,7 +103,6 @@
     NSArray *tabBarItemsAttributes = @[
                                        firstTabBarItemsAttributes,
                                        secondTabBarItemsAttributes,
-                                       thirdTabBarItemsAttributes,
                                        fourthTabBarItemsAttributes,
                                        fiveTabBarItemsAttributes
                                        ];
@@ -141,7 +116,7 @@
 #warning CUSTOMIZE YOUR TABBAR APPEARANCE
     // Customize UITabBar height
     // 自定义 TabBar 高度
-     tabBarController.tabBarHeight = 44.f;
+     tabBarController.tabBarHeight = 49.f;
     
     // set the text color for unselected state
     // 普通状态下的文字属性
@@ -151,7 +126,7 @@
     // set the text color for selected state
     // 选中状态下的文字属性
     NSMutableDictionary *selectedAttrs = [NSMutableDictionary dictionary];
-    selectedAttrs[NSForegroundColorAttributeName] = [UIColor blackColor];
+    selectedAttrs[NSForegroundColorAttributeName] = kOrangeColor;
     
     // set the text Attributes
     // 设置文字属性
@@ -172,7 +147,7 @@
     // set the bar shadow image
     // This shadow image attribute is ignored if the tab bar does not also have a custom background image.So at least set somthing.
     [[UITabBar appearance] setBackgroundImage:[[UIImage alloc] init]];
-    [[UITabBar appearance] setBackgroundColor:[UIColor whiteColor]];
+    [[UITabBar appearance] setBackgroundColor:kContentColor];
     [[UITabBar appearance] setShadowImage:[UIImage imageNamed:@"tapbar_top_line"]];
     
     // set the bar background image

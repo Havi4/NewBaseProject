@@ -34,12 +34,14 @@
 		570F2DAD1DBEF9FA0008F9FC /* UserInfoDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 570F2D991DBEF9FA0008F9FC /* UserInfoDetailModel.m */; };
 		570F2DAE1DBEF9FA0008F9FC /* WeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 570F2D9B1DBEF9FA0008F9FC /* WeatherModel.m */; };
 		579BD38D1DBA6D38005D072F /* NetWorkingAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 579BD38C1DBA6D38005D072F /* NetWorkingAPI.m */; };
+		57B047E81DC0FBA60059FB02 /* UIViewController+SQExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B047E71DC0FBA60059FB02 /* UIViewController+SQExtension.m */; };
 		57C8D1211DB8C29300EE5DA7 /* NSObject+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C8D1171DB8C29300EE5DA7 /* NSObject+Common.m */; };
 		57C8D1221DB8C29300EE5DA7 /* BaseNetworkAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C8D11D1DB8C29300EE5DA7 /* BaseNetworkAPI.m */; };
 		57C8D1231DB8C29300EE5DA7 /* HYBNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C8D1201DB8C29300EE5DA7 /* HYBNetworking.m */; };
 		57E9C2701DC093DE00947BEE /* GetLaunchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E9C26B1DC093DE00947BEE /* GetLaunchImage.m */; };
 		57E9C2711DC093DE00947BEE /* IanAdsStartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E9C26D1DC093DE00947BEE /* IanAdsStartView.m */; };
 		57E9C2721DC093DE00947BEE /* IanClickImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E9C26F1DC093DE00947BEE /* IanClickImageView.m */; };
+		57E9C2751DC0B3AF00947BEE /* CYNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E9C2741DC0B3AF00947BEE /* CYNavigationViewController.m */; };
 		57F59D2A1DBF21DA001D64EA /* CYLPlusButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F59D231DBF21DA001D64EA /* CYLPlusButton.m */; };
 		57F59D2B1DBF21DA001D64EA /* CYLTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F59D251DBF21DA001D64EA /* CYLTabBar.m */; };
 		57F59D2C1DBF21DA001D64EA /* CYLTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F59D271DBF21DA001D64EA /* CYLTabBarController.m */; };
@@ -171,6 +173,8 @@
 		570F2DAF1DBEFAC10008F9FC /* ModelHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelHeader.h; sourceTree = "<group>"; };
 		579BD38B1DBA6D38005D072F /* NetWorkingAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkingAPI.h; sourceTree = "<group>"; };
 		579BD38C1DBA6D38005D072F /* NetWorkingAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkingAPI.m; sourceTree = "<group>"; };
+		57B047E61DC0FBA60059FB02 /* UIViewController+SQExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+SQExtension.h"; sourceTree = "<group>"; };
+		57B047E71DC0FBA60059FB02 /* UIViewController+SQExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+SQExtension.m"; sourceTree = "<group>"; };
 		57C8D1161DB8C29300EE5DA7 /* NSObject+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Common.h"; sourceTree = "<group>"; };
 		57C8D1171DB8C29300EE5DA7 /* NSObject+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Common.m"; sourceTree = "<group>"; };
 		57C8D1191DB8C29300EE5DA7 /* Configer.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Configer.pch; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 		57E9C26D1DC093DE00947BEE /* IanAdsStartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IanAdsStartView.m; sourceTree = "<group>"; };
 		57E9C26E1DC093DE00947BEE /* IanClickImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IanClickImageView.h; sourceTree = "<group>"; };
 		57E9C26F1DC093DE00947BEE /* IanClickImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IanClickImageView.m; sourceTree = "<group>"; };
+		57E9C2731DC0B3AF00947BEE /* CYNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYNavigationViewController.h; sourceTree = "<group>"; };
+		57E9C2741DC0B3AF00947BEE /* CYNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYNavigationViewController.m; sourceTree = "<group>"; };
 		57F59D211DBF21DA001D64EA /* CYLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLConstants.h; sourceTree = "<group>"; };
 		57F59D221DBF21DA001D64EA /* CYLPlusButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLPlusButton.h; sourceTree = "<group>"; };
 		57F59D231DBF21DA001D64EA /* CYLPlusButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLPlusButton.m; sourceTree = "<group>"; };
@@ -467,6 +473,8 @@
 		57C8D1151DB8C29300EE5DA7 /* Category(分类) */ = {
 			isa = PBXGroup;
 			children = (
+				57B047E61DC0FBA60059FB02 /* UIViewController+SQExtension.h */,
+				57B047E71DC0FBA60059FB02 /* UIViewController+SQExtension.m */,
 				57C8D1161DB8C29300EE5DA7 /* NSObject+Common.h */,
 				57C8D1171DB8C29300EE5DA7 /* NSObject+Common.m */,
 			);
@@ -595,6 +603,8 @@
 				57F59D311DBF26AD001D64EA /* CYLTabBarControllerConfig.m */,
 				57F59DD01DBF35B5001D64EA /* TabPlusButtonSubclass.h */,
 				57F59DD11DBF35B5001D64EA /* TabPlusButtonSubclass.m */,
+				57E9C2731DC0B3AF00947BEE /* CYNavigationViewController.h */,
+				57E9C2741DC0B3AF00947BEE /* CYNavigationViewController.m */,
 			);
 			path = CYLTabBarController;
 			sourceTree = "<group>";
@@ -1057,9 +1067,11 @@
 				57F59DBF1DBF3438001D64EA /* EXTNil.m in Sources */,
 				57F59D2B1DBF21DA001D64EA /* CYLTabBar.m in Sources */,
 				57F59DC71DBF3438001D64EA /* README.md in Sources */,
+				57B047E81DC0FBA60059FB02 /* UIViewController+SQExtension.m in Sources */,
 				57F59DD21DBF35B5001D64EA /* TabPlusButtonSubclass.m in Sources */,
 				57F59D681DBF32AF001D64EA /* HomeStore.m in Sources */,
 				570F2DA71DBEF9FA0008F9FC /* SensorDataModel.m in Sources */,
+				57E9C2751DC0B3AF00947BEE /* CYNavigationViewController.m in Sources */,
 				57F59DDC1DC05BE9001D64EA /* CBStoreHouseRefreshControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

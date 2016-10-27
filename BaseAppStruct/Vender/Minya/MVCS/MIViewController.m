@@ -52,7 +52,7 @@
     // Set up pipeline
     [self setupPipeline:self.store.pipeline];
     [self.view setupPipeline:self.store.pipeline];
-    
+    self.view.backgroundColor = kBackgroundColor;
     // Add observers of the pipeline data.
     [self addObservers];
 }

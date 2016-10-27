@@ -9,6 +9,7 @@
 #import "MineViewController.h"
 #import "MinePipeline.h"
 #import "Minya.h"
+#import "UIViewController+SQExtension.h"
 
 @interface MineViewController ()
 
@@ -18,9 +19,13 @@
 
 @implementation MineViewController
 
+- (void)loadView {
+    [super loadView];
+    [self.navigationController.navigationBar setShadowImage:[UIImage imageWithColor:[UIColor redColor]]];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
     // Add you own code
     [self.store fetchData];
 }
