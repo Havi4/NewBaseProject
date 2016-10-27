@@ -25,5 +25,6 @@
 #import "Minya.h"
 #import <Masonry/Masonry.h>
 #import "ModelHeader.h"
+#import "UIImage+Common.h"
 
 #endif /* Configer_pch */

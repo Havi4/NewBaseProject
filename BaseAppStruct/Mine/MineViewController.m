@@ -18,13 +18,25 @@
 
 @property (nonatomic, strong) MinePipeline *pipeline;
 
+//自定
+@property (nonatomic, strong) UIBarButtonItem *leftBarItem;
+@property (nonatomic, strong) UIBarButtonItem *rightBarItem;
+
 @end
 
 @implementation MineViewController
 
 - (void)loadView {
     [super loadView];
-    [self.navigationController.navigationBar setShadowImage:[UIImage imageWithColor:[UIColor clearColor]]];
+    /*
+    [self.navigationController.navigationBar setShadowImage:[UIImage imageWithColor:[UIColor blackColor]]];
+     */
+    
+    self.leftBarItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"navi_message"] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarbuttonTaped:)];
+    self.rightBarItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"navi_setting"] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarbuttonTaped:)];
+    self.navigationItem.leftBarButtonItem = self.leftBarItem;
+    self.navigationItem.rightBarButtonItem = self.rightBarItem;
+    self.title = @"我的";
 }
 
 - (void)viewDidLoad {
@@ -37,10 +49,12 @@
 - (void)addObservers {
     
     @weakify(self)
+    /*
     [MIObserve(self.pipeline, mContentOffset) changed:^(id _Nonnull newValue) {
         @strongify(self)
         [self navigationBarGradualChangeWithScrollViewContent:self.pipeline.mContentOffset offset:kScaleLength(190.5) color:KC01_57c2de];
     }];
+     */
 }
 
 

@@ -76,6 +76,7 @@
         
         [startView startAnimationTime:3 WithCompletionBlock:^(IanAdsStartView *startView){
             DeBugLog(@"广告结束后，执行事件");
+            [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
             [self getADUrlFromServer];
         }];
     } else { // 第一次先下载广告
@@ -127,7 +128,7 @@
         
         textAttributes = @{
                            NSFontAttributeName : [UIFont boldSystemFontOfSize:16],
-                           NSForegroundColorAttributeName : [UIColor blackColor],
+                           NSForegroundColorAttributeName : [UIColor grayColor],
                            };
     } else {
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
@@ -144,6 +145,8 @@
     [navigationBarAppearance setBackgroundImage:backgroundImage
                                   forBarMetrics:UIBarMetricsDefault];
     [navigationBarAppearance setTitleTextAttributes:textAttributes];
+    [navigationBarAppearance setBarTintColor:[UIColor grayColor]];
+    [navigationBarAppearance setTintColor:[UIColor grayColor]];
 }
 
 
