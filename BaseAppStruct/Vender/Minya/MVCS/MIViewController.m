@@ -57,6 +57,7 @@
     [self addObservers];
 }
 
+
 #pragma mark - Public Methods
 
 - (void)addObservers { }

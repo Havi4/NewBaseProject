@@ -19,6 +19,8 @@
 @property (nonatomic, assign) NSUInteger inputSelectedPhotoIndex;
 @property (nonatomic, assign) BOOL inputFetchMoreData;
 
+@property (nonatomic, assign) CGPoint mContentOffset;
+
 // Context data
 // In general, context data is calculate property. They can be calculated
 // from other property.

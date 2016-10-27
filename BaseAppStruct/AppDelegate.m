@@ -23,7 +23,7 @@
     // Override point for customization after application launch.
     [TabPlusButtonSubclass registerPlusButton];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    [self setUpNavigationBarAppearance];
+    [self setUpNavigationBarAppearance];
     #pragma mark 设置tabbar
     CYLTabBarControllerConfig *tabBarControllerConfig = [[CYLTabBarControllerConfig alloc] init];
     self.window.rootViewController = tabBarControllerConfig.tabBarController;

@@ -11,6 +11,8 @@
 
 - (void)navigationBarGradualChangeWithScrollView:(UIScrollView *)scrollView titleView:(UIView *)titleView movableView:(UIView *)movableView offset:(CGFloat)offset color:(UIColor *)color;
 
+- (void)navigationBarGradualChangeWithScrollViewContent:(CGPoint)contentOffset offset:(CGFloat)offset color:(UIColor *)color;
+
 - (void)setNavigationBarColor:(UIColor *)color alpha:(CGFloat)alpha;
 
 @end

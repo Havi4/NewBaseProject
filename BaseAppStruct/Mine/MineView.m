@@ -9,14 +9,13 @@
 #import "MineView.h"
 #import "UIView+MIPipeline.h"
 #import "MinePipeline.h"
-#import "CBStoreHouseRefreshControl.h"
+#import "MJRefresh.h"
 
 @interface MineView ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) MinePipeline *pipeline;
 //private
 @property (nonatomic, strong) UITableView *userTableView;
-@property (nonatomic, strong) CBStoreHouseRefreshControl *storeHouseRefreshControl;
 
 @end
 
@@ -34,9 +33,33 @@
 {
     [self addSubview:self.userTableView];
     //
-    self.storeHouseRefreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.userTableView target:self refreshAction:@selector(refreshTriggered:) plist:@"storehouse" color:[UIColor grayColor] lineWidth:1.5 dropHeight:80 scale:1 horizontalRandomness:150 reverseLoadingAnimation:YES internalAnimationFactor:0.5];
     [self.userTableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self);
+        make.top.equalTo(self.mas_top);
+        make.bottom.equalTo(self.mas_bottom).offset(-49);
+        make.left.equalTo(self.mas_left);
+        make.right.equalTo(self.mas_right);
+    }];
+    __unsafe_unretained UITableView *tableView = self.userTableView;
+    
+    // 下拉刷新
+    tableView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            // 结束刷新
+            [tableView.mj_header endRefreshing];
+        });
+    }];
+    
+    // 设置自动切换透明度(在导航栏下面自动隐藏)
+    tableView.mj_header.automaticallyChangeAlpha = YES;
+    
+    // 上拉刷新
+    tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            // 结束刷新
+            [tableView.mj_footer endRefreshing];
+        });
     }];
 }
 
@@ -44,7 +67,7 @@
 
 - (UITableView *)userTableView {
     if (!_userTableView) {
-        _userTableView = [[UITableView alloc] init];
+        _userTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
         _userTableView.delegate = self;
         _userTableView.dataSource = self;
         [_userTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ViewCell"];
@@ -56,7 +79,7 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 8;
+    return 108;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -87,25 +110,14 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    [self.storeHouseRefreshControl scrollViewDidScroll];
+    self.pipeline.mContentOffset = scrollView.contentOffset;
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-    [self.storeHouseRefreshControl scrollViewDidEndDragging];
 }
 
 #pragma mark - Listening for the user to trigger a refresh
-
-- (void)refreshTriggered:(id)sender
-{
-    [self performSelector:@selector(finishRefreshControl) withObject:nil afterDelay:3 inModes:@[NSRunLoopCommonModes]];
-}
-
-- (void)finishRefreshControl
-{
-    [self.storeHouseRefreshControl finishingLoading];
-}
 
 
 @end
