@@ -10,12 +10,16 @@
 #import "UIView+MIPipeline.h"
 #import "MinePipeline.h"
 #import "MJRefresh.h"
+#import "MineReuseTableViewCell.h"
+#import "MineHeaderTableViewCell.h"
+#import "MineWeatherTableViewCell.h"
 
 @interface MineView ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) MinePipeline *pipeline;
 //private
 @property (nonatomic, strong) UITableView *userTableView;
+@property (nonatomic, strong) NSArray *cellShowArr;
 
 @end
 
@@ -39,28 +43,9 @@
         make.left.equalTo(self.mas_left);
         make.right.equalTo(self.mas_right);
     }];
-    __unsafe_unretained UITableView *tableView = self.userTableView;
-    
-    // 下拉刷新
-    tableView.mj_header= [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            // 结束刷新
-            [tableView.mj_header endRefreshing];
-        });
-    }];
-    
-    // 设置自动切换透明度(在导航栏下面自动隐藏)
-    tableView.mj_header.automaticallyChangeAlpha = YES;
-    
-    // 上拉刷新
-    tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            // 结束刷新
-            [tableView.mj_footer endRefreshing];
-        });
-    }];
+    NSString *settingPath = [[NSBundle mainBundle]pathForResource:@"Setting" ofType:@"plist"];
+    self.cellShowArr = [NSArray arrayWithContentsOfFile:settingPath];
+    //
 }
 
 #pragma mark - Properties Accessor
@@ -70,7 +55,8 @@
         _userTableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
         _userTableView.delegate = self;
         _userTableView.dataSource = self;
-        [_userTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ViewCell"];
+        [_userTableView setSeparatorColor:kBackgroundColor];
+        _userTableView.backgroundColor = kBackgroundColor;
     }
     
     return _userTableView;
@@ -78,16 +64,85 @@
 
 #pragma mark - UITableViewDataSource
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return self.cellShowArr.count;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 108;
+    return [[self.cellShowArr objectAtIndex:section] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        if (indexPath.row ==0) {
+            MineHeaderTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"headerCell"];
+            if (!cell) {
+                cell = [[MineHeaderTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"headerCell"];
+            }
+            return cell;
+        }else{
+            MineWeatherTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"weatherCell"];
+            if (!cell) {
+                cell = [[MineWeatherTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"weatherCell"];
+            }
+            return cell;
+        }
+    }else{
+        MineReuseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseCell"];
+        if (!cell) {
+            cell = [[MineReuseTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"reuseCell"];
+        }
+        [cell configureCellWith:[[self.cellShowArr objectAtIndex:indexPath.section]objectAtIndex:indexPath.row] andIndex:indexPath];
+        return cell;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0 && indexPath.row ==0) {
+        return 80;
+    }else{
+        return 49;
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 0.01;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    if (section !=3) {
+        return 15;
+    }else{
+        return 0.01;
+    }
+}
+
+-(void)viewDidLayoutSubviews {
+    if ([_userTableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        [_userTableView setSeparatorInset:UIEdgeInsetsZero];
+    }
+    if ([_userTableView respondsToSelector:@selector(setLayoutMargins:)])  {
+        [_userTableView setLayoutMargins:UIEdgeInsetsZero];
+    }
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ViewCell"];
-    cell.textLabel.text = self.pipeline.userInfo.nUserInfo.address;
-    
-    return cell;
+}
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPat{
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]){
+        [cell setSeparatorInset:UIEdgeInsetsZero];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.pipeline.selectedIndexPath = indexPath;
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)dealloc {
@@ -105,19 +160,5 @@
         [self.userTableView reloadData];
     }];
 }
-
-#pragma mark - Notifying refresh control of scrolling
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    self.pipeline.mContentOffset = scrollView.contentOffset;
-}
-
-- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
-{
-}
-
-#pragma mark - Listening for the user to trigger a refresh
-
 
 @end

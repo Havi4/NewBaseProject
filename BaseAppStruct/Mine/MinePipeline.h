@@ -21,6 +21,8 @@
 
 @property (nonatomic, assign) CGPoint mContentOffset;
 
+@property (nonatomic, strong) NSIndexPath *selectedIndexPath;
+
 // Context data
 // In general, context data is calculate property. They can be calculated
 // from other property.

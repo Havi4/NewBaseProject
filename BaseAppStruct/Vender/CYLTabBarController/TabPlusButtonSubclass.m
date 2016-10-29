@@ -75,7 +75,7 @@
     [button setImage:buttonImage forState:UIControlStateNormal];
     [button setImage:[UIImage imageNamed:@"sleep_hightlight"] forState:UIControlStateSelected];
     [button setTitle:@"睡眠" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    [button setTitleColor:kIconTintColor forState:UIControlStateNormal];
     
     [button setTitle:@"睡眠" forState:UIControlStateSelected];
     [button setTitleColor:kOrangeColor forState:UIControlStateSelected];

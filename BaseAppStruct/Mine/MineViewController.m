@@ -32,8 +32,8 @@
     [self.navigationController.navigationBar setShadowImage:[UIImage imageWithColor:[UIColor blackColor]]];
      */
     
-    self.leftBarItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"navi_message"] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarbuttonTaped:)];
-    self.rightBarItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"navi_setting"] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarbuttonTaped:)];
+    self.leftBarItem = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"navi_message"] imageByTintColor:kIconTintColor] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarbuttonTaped:)];
+    self.rightBarItem = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"navi_setting"] imageByTintColor:kIconTintColor] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarbuttonTaped:)];
     self.navigationItem.leftBarButtonItem = self.leftBarItem;
     self.navigationItem.rightBarButtonItem = self.rightBarItem;
     self.title = @"我的";
@@ -49,6 +49,12 @@
 - (void)addObservers {
     
     @weakify(self)
+    [MIObserve(self.pipeline, selectedIndexPath) changed:^(id  _Nonnull newValue) {
+        @strongify(self)
+        NSIndexPath *indexPath = newValue;
+        
+        DeBugLog(@"选中了section %ld ,cell %ld",(long)indexPath.section,(long)indexPath.row);
+    }];
     /*
     [MIObserve(self.pipeline, mContentOffset) changed:^(id _Nonnull newValue) {
         @strongify(self)

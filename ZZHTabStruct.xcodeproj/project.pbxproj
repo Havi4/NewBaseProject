@@ -32,6 +32,13 @@
 		570F2DAC1DBEF9FA0008F9FC /* TagListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 570F2D971DBEF9FA0008F9FC /* TagListModel.m */; };
 		570F2DAD1DBEF9FA0008F9FC /* UserInfoDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 570F2D991DBEF9FA0008F9FC /* UserInfoDetailModel.m */; };
 		570F2DAE1DBEF9FA0008F9FC /* WeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 570F2D9B1DBEF9FA0008F9FC /* WeatherModel.m */; };
+		572A7BAD1DC4921600DC5E8C /* Setting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 572A7BAC1DC4921600DC5E8C /* Setting.plist */; };
+		572A7BB11DC4981800DC5E8C /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 572A7BB01DC4981800DC5E8C /* BaseTableViewCell.m */; };
+		576CF6CA1DC433CC005FCEF1 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 576CF6C71DC433CC005FCEF1 /* UITableView+SDAutoTableViewCellHeight.m */; };
+		576CF6CB1DC433CC005FCEF1 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 576CF6C91DC433CC005FCEF1 /* UIView+SDAutoLayout.m */; };
+		576CF6CE1DC443D7005FCEF1 /* MineHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 576CF6CD1DC443D7005FCEF1 /* MineHeaderTableViewCell.m */; };
+		576CF6D11DC443FF005FCEF1 /* MineWeatherTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 576CF6D01DC443FF005FCEF1 /* MineWeatherTableViewCell.m */; };
+		576CF6D41DC44413005FCEF1 /* MineReuseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 576CF6D31DC44413005FCEF1 /* MineReuseTableViewCell.m */; };
 		57795AE21DC1F79A001DEF7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57795AE11DC1F79A001DEF7B /* Assets.xcassets */; };
 		57795AE51DC1FC95001DEF7B /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 57795AE41DC1FC95001DEF7B /* UIImage+Common.m */; };
 		579BD38D1DBA6D38005D072F /* NetWorkingAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 579BD38C1DBA6D38005D072F /* NetWorkingAPI.m */; };
@@ -189,6 +196,20 @@
 		570F2D9A1DBEF9FA0008F9FC /* WeatherModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherModel.h; sourceTree = "<group>"; };
 		570F2D9B1DBEF9FA0008F9FC /* WeatherModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherModel.m; sourceTree = "<group>"; };
 		570F2DAF1DBEFAC10008F9FC /* ModelHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelHeader.h; sourceTree = "<group>"; };
+		572A7BAC1DC4921600DC5E8C /* Setting.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Setting.plist; sourceTree = "<group>"; };
+		572A7BAF1DC4981800DC5E8C /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTableViewCell.h; path = BaseView/BaseTableViewCell.h; sourceTree = "<group>"; };
+		572A7BB01DC4981800DC5E8C /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTableViewCell.m; path = BaseView/BaseTableViewCell.m; sourceTree = "<group>"; };
+		576CF6C51DC433CC005FCEF1 /* SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAutoLayout.h; sourceTree = "<group>"; };
+		576CF6C61DC433CC005FCEF1 /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
+		576CF6C71DC433CC005FCEF1 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
+		576CF6C81DC433CC005FCEF1 /* UIView+SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDAutoLayout.h"; sourceTree = "<group>"; };
+		576CF6C91DC433CC005FCEF1 /* UIView+SDAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDAutoLayout.m"; sourceTree = "<group>"; };
+		576CF6CC1DC443D7005FCEF1 /* MineHeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineHeaderTableViewCell.h; sourceTree = "<group>"; };
+		576CF6CD1DC443D7005FCEF1 /* MineHeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineHeaderTableViewCell.m; sourceTree = "<group>"; };
+		576CF6CF1DC443FF005FCEF1 /* MineWeatherTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineWeatherTableViewCell.h; sourceTree = "<group>"; };
+		576CF6D01DC443FF005FCEF1 /* MineWeatherTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineWeatherTableViewCell.m; sourceTree = "<group>"; };
+		576CF6D21DC44413005FCEF1 /* MineReuseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineReuseTableViewCell.h; sourceTree = "<group>"; };
+		576CF6D31DC44413005FCEF1 /* MineReuseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineReuseTableViewCell.m; sourceTree = "<group>"; };
 		57795AE11DC1F79A001DEF7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57795AE31DC1FC95001DEF7B /* UIImage+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Common.h"; sourceTree = "<group>"; };
 		57795AE41DC1FC95001DEF7B /* UIImage+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Common.m"; sourceTree = "<group>"; };
@@ -514,6 +535,40 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		572A7BAE1DC497D200DC5E8C /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				572A7BAF1DC4981800DC5E8C /* BaseTableViewCell.h */,
+				572A7BB01DC4981800DC5E8C /* BaseTableViewCell.m */,
+			);
+			name = BaseView;
+			sourceTree = "<group>";
+		};
+		576CF6C41DC433CC005FCEF1 /* SDAutoLayout */ = {
+			isa = PBXGroup;
+			children = (
+				576CF6C51DC433CC005FCEF1 /* SDAutoLayout.h */,
+				576CF6C61DC433CC005FCEF1 /* UITableView+SDAutoTableViewCellHeight.h */,
+				576CF6C71DC433CC005FCEF1 /* UITableView+SDAutoTableViewCellHeight.m */,
+				576CF6C81DC433CC005FCEF1 /* UIView+SDAutoLayout.h */,
+				576CF6C91DC433CC005FCEF1 /* UIView+SDAutoLayout.m */,
+			);
+			path = SDAutoLayout;
+			sourceTree = "<group>";
+		};
+		57795AE61DC304CD001DEF7B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				576CF6CC1DC443D7005FCEF1 /* MineHeaderTableViewCell.h */,
+				576CF6CD1DC443D7005FCEF1 /* MineHeaderTableViewCell.m */,
+				576CF6CF1DC443FF005FCEF1 /* MineWeatherTableViewCell.h */,
+				576CF6D01DC443FF005FCEF1 /* MineWeatherTableViewCell.m */,
+				576CF6D21DC44413005FCEF1 /* MineReuseTableViewCell.h */,
+				576CF6D31DC44413005FCEF1 /* MineReuseTableViewCell.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		57B048281DC1B1E30059FB02 /* MJRefresh */ = {
 			isa = PBXGroup;
 			children = (
@@ -612,6 +667,7 @@
 		57C8D1141DB8C29300EE5DA7 /* Expand(扩展) */ = {
 			isa = PBXGroup;
 			children = (
+				572A7BAE1DC497D200DC5E8C /* BaseView */,
 				570DF4701DBDDF5700D90208 /* DataBase */,
 				57C8D12C1DB8C30800EE5DA7 /* Tools(工具) */,
 				57C8D1151DB8C29300EE5DA7 /* Category(分类) */,
@@ -670,6 +726,7 @@
 		57C8D1241DB8C29E00EE5DA7 /* Vender(第三方) */ = {
 			isa = PBXGroup;
 			children = (
+				576CF6C41DC433CC005FCEF1 /* SDAutoLayout */,
 				57B048281DC1B1E30059FB02 /* MJRefresh */,
 				57E9C2691DC093DE00947BEE /* IanAdsStartView */,
 				57F59D841DBF3438001D64EA /* Minya */,
@@ -704,6 +761,7 @@
 			children = (
 				57F59DDD1DC05C30001D64EA /* storehouse.plist */,
 				2C2ACA9B1D191D0900320086 /* Info.plist */,
+				572A7BAC1DC4921600DC5E8C /* Setting.plist */,
 				2C2ACA981D191D0900320086 /* LaunchScreen.storyboard */,
 			);
 			name = Others;
@@ -826,6 +884,7 @@
 		57F59D771DBF3364001D64EA /* Mine */ = {
 			isa = PBXGroup;
 			children = (
+				57795AE61DC304CD001DEF7B /* Views */,
 				57F59D781DBF3364001D64EA /* MinePipeline.h */,
 				57F59D791DBF3364001D64EA /* MinePipeline.m */,
 				57F59D7A1DBF3364001D64EA /* MineStore.h */,
@@ -1059,6 +1118,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				572A7BAD1DC4921600DC5E8C /* Setting.plist in Resources */,
 				57F59DDE1DC05C30001D64EA /* storehouse.plist in Resources */,
 				2C2ACA9A1D191D0900320086 /* LaunchScreen.storyboard in Resources */,
 				57795AE21DC1F79A001DEF7B /* Assets.xcassets in Resources */,
@@ -1168,6 +1228,7 @@
 				57B048631DC1B1E30059FB02 /* MJRefreshNormalHeader.m in Sources */,
 				57B0486A1DC1B1E30059FB02 /* UIView+MJExtension.m in Sources */,
 				570F2D9C1DBEF9FA0008F9FC /* AccessTockenModel.m in Sources */,
+				576CF6D11DC443FF005FCEF1 /* MineWeatherTableViewCell.m in Sources */,
 				57F59D2A1DBF21DA001D64EA /* CYLPlusButton.m in Sources */,
 				570F2D9F1DBEF9FA0008F9FC /* ArticleModel.m in Sources */,
 				57C8D1211DB8C29300EE5DA7 /* NSObject+Common.m in Sources */,
@@ -1188,9 +1249,11 @@
 				57B0485A1DC1B1E30059FB02 /* MJRefreshFooter.m in Sources */,
 				570F2DA41DBEF9FA0008F9FC /* FriendListModel.m in Sources */,
 				57F59DC11DBF3438001D64EA /* EXTSafeCategory.m in Sources */,
+				572A7BB11DC4981800DC5E8C /* BaseTableViewCell.m in Sources */,
 				57F59DC81DBF3438001D64EA /* MIMediator.m in Sources */,
 				57B0485B1DC1B1E30059FB02 /* MJRefreshHeader.m in Sources */,
 				57F59D751DBF32AF001D64EA /* ReportView.m in Sources */,
+				576CF6CB1DC433CC005FCEF1 /* UIView+SDAutoLayout.m in Sources */,
 				57F59D671DBF32AF001D64EA /* HomePipeline.m in Sources */,
 				57F59D641DBF32AF001D64EA /* DevicesStore.m in Sources */,
 				57F59DC91DBF3438001D64EA /* MIPipeline.m in Sources */,
@@ -1205,8 +1268,10 @@
 				57F59D6A1DBF32AF001D64EA /* HomeViewController.m in Sources */,
 				57C8D1231DB8C29300EE5DA7 /* HYBNetworking.m in Sources */,
 				57B0485F1DC1B1E30059FB02 /* MJRefreshBackGifFooter.m in Sources */,
+				576CF6D41DC44413005FCEF1 /* MineReuseTableViewCell.m in Sources */,
 				57F59D651DBF32AF001D64EA /* DevicesView.m in Sources */,
 				57E9C2721DC093DE00947BEE /* IanClickImageView.m in Sources */,
+				576CF6CE1DC443D7005FCEF1 /* MineHeaderTableViewCell.m in Sources */,
 				57F59D661DBF32AF001D64EA /* DevicesViewController.m in Sources */,
 				57F59DC01DBF3438001D64EA /* EXTRuntimeExtensions.m in Sources */,
 				57F59D801DBF3364001D64EA /* MinePipeline.m in Sources */,
@@ -1225,6 +1290,7 @@
 				570F2DAE1DBEF9FA0008F9FC /* WeatherModel.m in Sources */,
 				57F59DBF1DBF3438001D64EA /* EXTNil.m in Sources */,
 				57F59D2B1DBF21DA001D64EA /* CYLTabBar.m in Sources */,
+				576CF6CA1DC433CC005FCEF1 /* UITableView+SDAutoTableViewCellHeight.m in Sources */,
 				57F59DC71DBF3438001D64EA /* README.md in Sources */,
 				57B047E81DC0FBA60059FB02 /* UIViewController+SQExtension.m in Sources */,
 				57B048581DC1B1E30059FB02 /* MJRefreshBackFooter.m in Sources */,

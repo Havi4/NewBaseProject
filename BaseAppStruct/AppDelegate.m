@@ -124,11 +124,11 @@
     UIImage *backgroundImage = nil;
     NSDictionary *textAttributes = nil;
     if (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) {
-        backgroundImage = [UIImage imageWithColor:kContentColor];
+        backgroundImage = [UIImage imageWithColor:kCellBackColor];
         
         textAttributes = @{
-                           NSFontAttributeName : [UIFont boldSystemFontOfSize:16],
-                           NSForegroundColorAttributeName : [UIColor grayColor],
+                           NSFontAttributeName : [UIFont boldSystemFontOfSize:18],
+                           NSForegroundColorAttributeName : kIconTintColor,
                            };
     } else {
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_7_0
@@ -145,8 +145,8 @@
     [navigationBarAppearance setBackgroundImage:backgroundImage
                                   forBarMetrics:UIBarMetricsDefault];
     [navigationBarAppearance setTitleTextAttributes:textAttributes];
-    [navigationBarAppearance setBarTintColor:[UIColor grayColor]];
-    [navigationBarAppearance setTintColor:[UIColor grayColor]];
+    [navigationBarAppearance setBarTintColor:kIconTintColor];
+    [navigationBarAppearance setTintColor:kIconTintColor];
 }
 
 

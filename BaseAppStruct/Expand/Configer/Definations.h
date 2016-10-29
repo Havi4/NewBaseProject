@@ -43,8 +43,9 @@
 
 //背景色定义
 #define kOrangeColor [UIColor colorWithRed:1.000 green:0.635 blue:0.333 alpha:1.00]
-#define kBackgroundColor [UIColor colorWithRed:0.137 green:0.153 blue:0.165 alpha:1.00]
-#define kGreyColor [UIColor colorWithRed:0.804 green:0.816 blue:0.843 alpha:1.00]
-#define kWhiteColor [UIColor colorWithRed:1.000 green:1.000 blue:1.000 alpha:1.00]
-#define kContentColor [UIColor colorWithRed:0.161 green:0.173 blue:0.192 alpha:1.00]
-
+#define kBackgroundColor [UIColor colorWithRed:0.118 green:0.118 blue:0.118 alpha:1.00]
+#define kCellBackColor [UIColor colorWithRed:0.173 green:0.173 blue:0.173 alpha:1.00]
+#define kIconTintColor [UIColor colorWithRed:0.980 green:0.980 blue:0.980 alpha:1.00]
+#define kContentColor [UIColor colorWithRed:0.600 green:0.600 blue:0.592 alpha:1.00]
+//字体定义
+#define kTitleFont [UIFont systemFontOfSize:16]
