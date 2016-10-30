@@ -34,6 +34,7 @@
 		570F2DAE1DBEF9FA0008F9FC /* WeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 570F2D9B1DBEF9FA0008F9FC /* WeatherModel.m */; };
 		572A7BAD1DC4921600DC5E8C /* Setting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 572A7BAC1DC4921600DC5E8C /* Setting.plist */; };
 		572A7BB11DC4981800DC5E8C /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 572A7BB01DC4981800DC5E8C /* BaseTableViewCell.m */; };
+		572A7BBB1DC4F36900DC5E8C /* RefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 572A7BBA1DC4F36900DC5E8C /* RefreshHeader.m */; };
 		576CF6CA1DC433CC005FCEF1 /* UITableView+SDAutoTableViewCellHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 576CF6C71DC433CC005FCEF1 /* UITableView+SDAutoTableViewCellHeight.m */; };
 		576CF6CB1DC433CC005FCEF1 /* UIView+SDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 576CF6C91DC433CC005FCEF1 /* UIView+SDAutoLayout.m */; };
 		576CF6CE1DC443D7005FCEF1 /* MineHeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 576CF6CD1DC443D7005FCEF1 /* MineHeaderTableViewCell.m */; };
@@ -199,6 +200,8 @@
 		572A7BAC1DC4921600DC5E8C /* Setting.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Setting.plist; sourceTree = "<group>"; };
 		572A7BAF1DC4981800DC5E8C /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTableViewCell.h; path = BaseView/BaseTableViewCell.h; sourceTree = "<group>"; };
 		572A7BB01DC4981800DC5E8C /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTableViewCell.m; path = BaseView/BaseTableViewCell.m; sourceTree = "<group>"; };
+		572A7BB91DC4F36900DC5E8C /* RefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RefreshHeader.h; path = BaseView/RefreshHeader.h; sourceTree = "<group>"; };
+		572A7BBA1DC4F36900DC5E8C /* RefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RefreshHeader.m; path = BaseView/RefreshHeader.m; sourceTree = "<group>"; };
 		576CF6C51DC433CC005FCEF1 /* SDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAutoLayout.h; sourceTree = "<group>"; };
 		576CF6C61DC433CC005FCEF1 /* UITableView+SDAutoTableViewCellHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+SDAutoTableViewCellHeight.h"; sourceTree = "<group>"; };
 		576CF6C71DC433CC005FCEF1 /* UITableView+SDAutoTableViewCellHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+SDAutoTableViewCellHeight.m"; sourceTree = "<group>"; };
@@ -540,6 +543,8 @@
 			children = (
 				572A7BAF1DC4981800DC5E8C /* BaseTableViewCell.h */,
 				572A7BB01DC4981800DC5E8C /* BaseTableViewCell.m */,
+				572A7BB91DC4F36900DC5E8C /* RefreshHeader.h */,
+				572A7BBA1DC4F36900DC5E8C /* RefreshHeader.m */,
 			);
 			name = BaseView;
 			sourceTree = "<group>";
@@ -1287,6 +1292,7 @@
 				570F2DAC1DBEF9FA0008F9FC /* TagListModel.m in Sources */,
 				2C2ACAD81D194ED100320086 /* MainViewController.m in Sources */,
 				2C2ACA8C1D191D0900320086 /* main.m in Sources */,
+				572A7BBB1DC4F36900DC5E8C /* RefreshHeader.m in Sources */,
 				570F2DAE1DBEF9FA0008F9FC /* WeatherModel.m in Sources */,
 				57F59DBF1DBF3438001D64EA /* EXTNil.m in Sources */,
 				57F59D2B1DBF21DA001D64EA /* CYLTabBar.m in Sources */,

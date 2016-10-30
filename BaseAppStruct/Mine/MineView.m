@@ -9,7 +9,7 @@
 #import "MineView.h"
 #import "UIView+MIPipeline.h"
 #import "MinePipeline.h"
-#import "MJRefresh.h"
+#import "RefreshHeader.h"
 #import "MineReuseTableViewCell.h"
 #import "MineHeaderTableViewCell.h"
 #import "MineWeatherTableViewCell.h"
@@ -46,7 +46,27 @@
     NSString *settingPath = [[NSBundle mainBundle]pathForResource:@"Setting" ofType:@"plist"];
     self.cellShowArr = [NSArray arrayWithContentsOfFile:settingPath];
     //
+    self.userTableView.mj_header = [RefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
+    
+    // 马上进入刷新状态
+    [self.userTableView.mj_header beginRefreshing];
 }
+
+- (void)loadNewData
+{
+    // 1.添加假数据
+    
+    // 2.模拟2秒后刷新表格UI（真实开发中，可以移除这段gcd代码）
+    __weak UITableView *tableView = self.userTableView;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        // 刷新表格
+        [tableView reloadData];
+        
+        // 拿到当前的下拉刷新控件，结束刷新状态
+        [tableView.mj_header endRefreshing];
+    });
+}
+
 
 #pragma mark - Properties Accessor
 
