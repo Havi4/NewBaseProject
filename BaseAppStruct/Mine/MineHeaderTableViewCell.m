@@ -7,6 +7,7 @@
 //
 
 #import "MineHeaderTableViewCell.h"
+#import "UIImageView+WebCache.h"
 
 @interface MineHeaderTableViewCell ()
 
@@ -31,7 +32,70 @@
 
 - (void)setup
 {
+    self.iconImageView = [[UIImageView alloc]init];
+    [self.contentView addSubview:self.iconImageView];
+    self.iconImageView.image = [UIImage imageNamed:@"head_placeholder"];
+    self.iconImageView.layer.cornerRadius = 30;
+    self.iconImageView.layer.masksToBounds = YES;
+    self.iconImageView.layer.borderColor = kContentColor.CGColor;
+    self.iconImageView.layer.borderWidth = 2;
     
+    //
+    self.editImageView = [[UIImageView alloc]init];
+    [self.iconImageView addSubview:self.editImageView];
+    self.editImageView.image = [UIImage imageNamed:@"editIcon"];
+        //
+    self.mineNameLabel = [[UILabel alloc]init];
+    [self.contentView addSubview:self.mineNameLabel];
+    self.mineNameLabel.text = @"Havi_Lee";
+    self.mineNameLabel.font = kTitleFont;
+    self.mineNameLabel.textColor = kOrangeColor;
+    self.mineCheckLabel = [[UILabel alloc]init];
+    [self.contentView addSubview:self.mineCheckLabel];
+    self.mineCheckLabel.text = @"点击查看";
+    self.mineCheckLabel.font = kTitleFont;
+    self.mineCheckLabel.textColor = kContentColor;
+    
+    //
+    self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    [self setTintColor:kContentColor];
+    self.mineBarcodeImageView = [[UIImageView alloc]init];
+    [self.contentView addSubview:self.mineBarcodeImageView];
+    self.mineBarcodeImageView.image = [UIImage imageNamed:@"barCode"];
+    
+    self.iconImageView.sd_layout
+    .leftSpaceToView(self.contentView,15)
+    .widthIs(60)
+    .heightIs(60)
+    .centerYEqualToView(self.contentView);
+    
+    self.mineNameLabel.sd_layout
+    .leftSpaceToView(self.iconImageView,10)
+    .topSpaceToView(self.contentView,15);
+    
+    self.mineCheckLabel.sd_layout
+    .leftSpaceToView(self.iconImageView,10)
+    .bottomSpaceToView(self.contentView,-20);
+    
+    self.editImageView.sd_layout
+    .rightSpaceToView(self.iconImageView,2)
+    .bottomSpaceToView(self.iconImageView,2)
+    .widthIs(15)
+    .heightIs(15);
+    
+    self.mineBarcodeImageView.sd_layout
+    .centerYEqualToView(self.contentView)
+    .rightSpaceToView(self.contentView,0)
+    .widthIs(20)
+    .heightIs(20);
+    
+}
+
+- (void)configureCellWith:(id)item andIndex:(NSIndexPath *)indexPath
+{
+    UserInfoDetailModel *user = item;
+    [self.iconImageView setImageWithURL:[NSURL URLWithString:user.nUserInfo.portraitFileUrl ] placeholder:[UIImage imageNamed:@"head_placeholder"]];
+    self.mineNameLabel.text = user.nUserInfo.userName.length == 0 ? @"匿名用户":user.nUserInfo.userName;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

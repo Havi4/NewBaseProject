@@ -30,7 +30,7 @@
 @property (strong, nonatomic) NSString *alarmTimeSleepTooLong;
 @property (strong, nonatomic) NSString *sleepStartTime;
 @property (strong, nonatomic) NSString *sleepEndTime;
-
+@property (strong, nonatomic) NSString *portraitFileUrl;
 
 @end
 

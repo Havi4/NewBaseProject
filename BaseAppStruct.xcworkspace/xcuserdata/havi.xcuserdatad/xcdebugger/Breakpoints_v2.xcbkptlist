@@ -9,22 +9,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "BaseAppStruct/Expand/NetWork/HYBNetworking/HYBNetworking.m"
-            timestampString = "499095471.820488"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "369"
-            endingLineNumber = "369"
-            landmarkName = "+_requestWithUrl:refreshCache:httpMedth:params:progress:success:fail:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "BaseAppStruct/Vender/CBRefresh/CBStoreHouseRefreshControl.m"
             timestampString = "499231389.905078"
             startingColumnNumber = "9223372036854775807"

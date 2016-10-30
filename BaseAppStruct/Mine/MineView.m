@@ -100,6 +100,7 @@
             if (!cell) {
                 cell = [[MineHeaderTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"headerCell"];
             }
+            [cell configureCellWith:self.pipeline.userInfo andIndex:indexPath];
             return cell;
         }else{
             MineWeatherTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"weatherCell"];

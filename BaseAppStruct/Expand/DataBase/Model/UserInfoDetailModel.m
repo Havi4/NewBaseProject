@@ -31,6 +31,7 @@
              @"alarmTimeSleepTooLong"   : @"AlarmTimeSleepTooLong",
              @"sleepStartTime"          : @"SleepStartTime",
              @"sleepEndTime"            : @"SleepEndTime",
+             @"portraitFileUrl"         : @"PortraitFileUrl"
              };
 }
 

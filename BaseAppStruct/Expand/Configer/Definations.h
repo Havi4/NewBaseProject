@@ -49,3 +49,4 @@
 #define kContentColor [UIColor colorWithRed:0.600 green:0.600 blue:0.592 alpha:1.00]
 //字体定义
 #define kTitleFont [UIFont systemFontOfSize:16]
+#define kSubTitleFont [UIFont systemFontOfSize:14]
