@@ -47,9 +47,9 @@
     self.cellShowArr = [NSArray arrayWithContentsOfFile:settingPath];
     //
     self.userTableView.mj_header = [RefreshHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewData)];
-    
     // 马上进入刷新状态
     [self.userTableView.mj_header beginRefreshing];
+    
 }
 
 - (void)loadNewData
