@@ -67,6 +67,10 @@
 		57C8D1211DB8C29300EE5DA7 /* NSObject+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C8D1171DB8C29300EE5DA7 /* NSObject+Common.m */; };
 		57C8D1221DB8C29300EE5DA7 /* BaseNetworkAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C8D11D1DB8C29300EE5DA7 /* BaseNetworkAPI.m */; };
 		57C8D1231DB8C29300EE5DA7 /* HYBNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C8D1201DB8C29300EE5DA7 /* HYBNetworking.m */; };
+		57E1413A1DC709E000A3821B /* SettingPipeline.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E141331DC709E000A3821B /* SettingPipeline.m */; };
+		57E1413B1DC709E000A3821B /* SettingStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E141351DC709E000A3821B /* SettingStore.m */; };
+		57E1413C1DC709E000A3821B /* SettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E141371DC709E000A3821B /* SettingView.m */; };
+		57E1413D1DC709E000A3821B /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E141391DC709E000A3821B /* SettingViewController.m */; };
 		57E9C2701DC093DE00947BEE /* GetLaunchImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E9C26B1DC093DE00947BEE /* GetLaunchImage.m */; };
 		57E9C2711DC093DE00947BEE /* IanAdsStartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E9C26D1DC093DE00947BEE /* IanAdsStartView.m */; };
 		57E9C2721DC093DE00947BEE /* IanClickImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E9C26F1DC093DE00947BEE /* IanClickImageView.m */; };
@@ -268,6 +272,14 @@
 		57C8D11D1DB8C29300EE5DA7 /* BaseNetworkAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNetworkAPI.m; sourceTree = "<group>"; };
 		57C8D11F1DB8C29300EE5DA7 /* HYBNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYBNetworking.h; sourceTree = "<group>"; };
 		57C8D1201DB8C29300EE5DA7 /* HYBNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYBNetworking.m; sourceTree = "<group>"; };
+		57E141321DC709E000A3821B /* SettingPipeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingPipeline.h; sourceTree = "<group>"; };
+		57E141331DC709E000A3821B /* SettingPipeline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingPipeline.m; sourceTree = "<group>"; };
+		57E141341DC709E000A3821B /* SettingStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingStore.h; sourceTree = "<group>"; };
+		57E141351DC709E000A3821B /* SettingStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingStore.m; sourceTree = "<group>"; };
+		57E141361DC709E000A3821B /* SettingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingView.h; sourceTree = "<group>"; };
+		57E141371DC709E000A3821B /* SettingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingView.m; sourceTree = "<group>"; };
+		57E141381DC709E000A3821B /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		57E141391DC709E000A3821B /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		57E9C26A1DC093DE00947BEE /* GetLaunchImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetLaunchImage.h; sourceTree = "<group>"; };
 		57E9C26B1DC093DE00947BEE /* GetLaunchImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetLaunchImage.m; sourceTree = "<group>"; };
 		57E9C26C1DC093DE00947BEE /* IanAdsStartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IanAdsStartView.h; sourceTree = "<group>"; };
@@ -791,6 +803,39 @@
 			name = AppDelegate;
 			sourceTree = "<group>";
 		};
+		57E141301DC701DE00A3821B /* MineView */ = {
+			isa = PBXGroup;
+			children = (
+				57795AE61DC304CD001DEF7B /* Views */,
+				57F59D781DBF3364001D64EA /* MinePipeline.h */,
+				57F59D791DBF3364001D64EA /* MinePipeline.m */,
+				57F59D7A1DBF3364001D64EA /* MineStore.h */,
+				57F59D7B1DBF3364001D64EA /* MineStore.m */,
+				57F59DD31DBF6042001D64EA /* MineService.h */,
+				57F59DD41DBF6042001D64EA /* MineService.m */,
+				57F59D7C1DBF3364001D64EA /* MineView.h */,
+				57F59D7D1DBF3364001D64EA /* MineView.m */,
+				57F59D7E1DBF3364001D64EA /* MineViewController.h */,
+				57F59D7F1DBF3364001D64EA /* MineViewController.m */,
+			);
+			name = MineView;
+			sourceTree = "<group>";
+		};
+		57E141311DC7021200A3821B /* SettingView */ = {
+			isa = PBXGroup;
+			children = (
+				57E141321DC709E000A3821B /* SettingPipeline.h */,
+				57E141331DC709E000A3821B /* SettingPipeline.m */,
+				57E141341DC709E000A3821B /* SettingStore.h */,
+				57E141351DC709E000A3821B /* SettingStore.m */,
+				57E141361DC709E000A3821B /* SettingView.h */,
+				57E141371DC709E000A3821B /* SettingView.m */,
+				57E141381DC709E000A3821B /* SettingViewController.h */,
+				57E141391DC709E000A3821B /* SettingViewController.m */,
+			);
+			name = SettingView;
+			sourceTree = "<group>";
+		};
 		57E9C2691DC093DE00947BEE /* IanAdsStartView */ = {
 			isa = PBXGroup;
 			children = (
@@ -889,17 +934,8 @@
 		57F59D771DBF3364001D64EA /* Mine */ = {
 			isa = PBXGroup;
 			children = (
-				57795AE61DC304CD001DEF7B /* Views */,
-				57F59D781DBF3364001D64EA /* MinePipeline.h */,
-				57F59D791DBF3364001D64EA /* MinePipeline.m */,
-				57F59D7A1DBF3364001D64EA /* MineStore.h */,
-				57F59D7B1DBF3364001D64EA /* MineStore.m */,
-				57F59DD31DBF6042001D64EA /* MineService.h */,
-				57F59DD41DBF6042001D64EA /* MineService.m */,
-				57F59D7C1DBF3364001D64EA /* MineView.h */,
-				57F59D7D1DBF3364001D64EA /* MineView.m */,
-				57F59D7E1DBF3364001D64EA /* MineViewController.h */,
-				57F59D7F1DBF3364001D64EA /* MineViewController.m */,
+				57E141311DC7021200A3821B /* SettingView */,
+				57E141301DC701DE00A3821B /* MineView */,
 			);
 			path = Mine;
 			sourceTree = "<group>";
@@ -1200,6 +1236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57E1413B1DC709E000A3821B /* SettingStore.m in Sources */,
 				57F59DC51DBF3438001D64EA /* NSMethodSignature+EXT.m in Sources */,
 				570F2DAA1DBEF9FA0008F9FC /* ServerTimeModelTwo.m in Sources */,
 				57F59D741DBF32AF001D64EA /* ReportStore.m in Sources */,
@@ -1208,6 +1245,7 @@
 				57F59DC41DBF3438001D64EA /* NSInvocation+EXT.m in Sources */,
 				57F59DC21DBF3438001D64EA /* EXTScope.m in Sources */,
 				570F2DA31DBEF9FA0008F9FC /* FriendDeviceListModel.m in Sources */,
+				57E1413C1DC709E000A3821B /* SettingView.m in Sources */,
 				57C8D1221DB8C29300EE5DA7 /* BaseNetworkAPI.m in Sources */,
 				57F59DBE1DBF3438001D64EA /* EXTConcreteProtocol.m in Sources */,
 				57F59DC61DBF3438001D64EA /* LICENSE.md in Sources */,
@@ -1233,6 +1271,7 @@
 				57B048631DC1B1E30059FB02 /* MJRefreshNormalHeader.m in Sources */,
 				57B0486A1DC1B1E30059FB02 /* UIView+MJExtension.m in Sources */,
 				570F2D9C1DBEF9FA0008F9FC /* AccessTockenModel.m in Sources */,
+				57E1413D1DC709E000A3821B /* SettingViewController.m in Sources */,
 				576CF6D11DC443FF005FCEF1 /* MineWeatherTableViewCell.m in Sources */,
 				57F59D2A1DBF21DA001D64EA /* CYLPlusButton.m in Sources */,
 				570F2D9F1DBEF9FA0008F9FC /* ArticleModel.m in Sources */,
@@ -1252,6 +1291,7 @@
 				57F59DBB1DBF3438001D64EA /* NSObject+MIKVO.m in Sources */,
 				57F59D831DBF3364001D64EA /* MineViewController.m in Sources */,
 				57B0485A1DC1B1E30059FB02 /* MJRefreshFooter.m in Sources */,
+				57E1413A1DC709E000A3821B /* SettingPipeline.m in Sources */,
 				570F2DA41DBEF9FA0008F9FC /* FriendListModel.m in Sources */,
 				57F59DC11DBF3438001D64EA /* EXTSafeCategory.m in Sources */,
 				572A7BB11DC4981800DC5E8C /* BaseTableViewCell.m in Sources */,

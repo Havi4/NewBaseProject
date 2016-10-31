@@ -33,7 +33,7 @@
      */
     
     self.leftBarItem = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"navi_message"] imageByTintColor:kIconTintColor] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarbuttonTaped:)];
-    self.rightBarItem = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"navi_setting"] imageByTintColor:kIconTintColor] style:UIBarButtonItemStylePlain target:self action:@selector(leftBarbuttonTaped:)];
+    self.rightBarItem = [[UIBarButtonItem alloc]initWithImage:[[UIImage imageNamed:@"navi_setting"] imageByTintColor:kIconTintColor] style:UIBarButtonItemStylePlain target:self action:@selector(rightBarbuttonTaped:)];
     self.navigationItem.leftBarButtonItem = self.leftBarItem;
     self.navigationItem.rightBarButtonItem = self.rightBarItem;
     self.title = @"我的";
@@ -61,6 +61,14 @@
         [self navigationBarGradualChangeWithScrollViewContent:self.pipeline.mContentOffset offset:kScaleLength(190.5) color:KC01_57c2de];
     }];
      */
+}
+
+- (void)rightBarbuttonTaped:(UIBarButtonItem *)barButton
+{
+    MIScene *settingScen = [MIScene sceneWithView:@"SettingView" controller:@"SettingViewController" store:@"SettingStore"];
+    UIViewController *setting = [[MIMediator sharedMediator]viewControllerWithScene:settingScen context:nil];
+    setting.title = @"设定";
+    [self.navigationController pushViewController:setting animated:YES];
 }
 
 
