@@ -42,7 +42,7 @@
     
     //
     self.editImageView = [[UIImageView alloc]init];
-    [self.iconImageView addSubview:self.editImageView];
+    [self.contentView addSubview:self.editImageView];
     self.editImageView.image = [UIImage imageNamed:@"editIcon"];
         //
     self.mineNameLabel = [[UILabel alloc]init];
@@ -78,8 +78,8 @@
     .bottomSpaceToView(self.contentView,-20);
     
     self.editImageView.sd_layout
-    .rightSpaceToView(self.iconImageView,2)
-    .bottomSpaceToView(self.iconImageView,2)
+    .leftSpaceToView(self.iconImageView,-15)
+    .topSpaceToView(self.iconImageView,-15)
     .widthIs(15)
     .heightIs(15);
     
