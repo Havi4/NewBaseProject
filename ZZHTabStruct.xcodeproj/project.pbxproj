@@ -126,7 +126,6 @@
 		57F59DD51DBF6042001D64EA /* MineService.m in Sources */ = {isa = PBXBuildFile; fileRef = 57F59DD41DBF6042001D64EA /* MineService.m */; };
 		57F59DDE1DC05C30001D64EA /* storehouse.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57F59DDD1DC05C30001D64EA /* storehouse.plist */; };
 		6292224149693A501FB6C4B5 /* libPods-ZZHTabStruct.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 796F2BD85BDEE6B8B9A752FF /* libPods-ZZHTabStruct.a */; };
-		E08A755EB156C79AE4B17315 /* libPods-BaseAppStruct.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEEA440E7E3119120068353F /* libPods-BaseAppStruct.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -393,7 +392,6 @@
 		57F59DDD1DC05C30001D64EA /* storehouse.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = storehouse.plist; sourceTree = "<group>"; };
 		796F2BD85BDEE6B8B9A752FF /* libPods-ZZHTabStruct.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZZHTabStruct.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B6A7C2AF06A8FDE744F7187 /* Pods-ZZHTabStruct.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZZHTabStruct.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZZHTabStruct/Pods-ZZHTabStruct.debug.xcconfig"; sourceTree = "<group>"; };
-		BEEA440E7E3119120068353F /* libPods-BaseAppStruct.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseAppStruct.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,7 +399,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E08A755EB156C79AE4B17315 /* libPods-BaseAppStruct.a in Frameworks */,
 				6292224149693A501FB6C4B5 /* libPods-ZZHTabStruct.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1045,7 +1042,6 @@
 		DE84FF4062A43531F9563435 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BEEA440E7E3119120068353F /* libPods-BaseAppStruct.a */,
 				796F2BD85BDEE6B8B9A752FF /* libPods-ZZHTabStruct.a */,
 			);
 			name = Frameworks;
